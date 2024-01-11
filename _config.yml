@@ -136,7 +136,7 @@ content:
           Double majors
       - layout: top-right
         title: POSTECH
-        sub_title:  Industrial management and engineering M.s.
+        sub_title:  Industrial management and engineering M.S.
         caption: 2020.03 - 2022.02
         quote: >
           Thesis: Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
