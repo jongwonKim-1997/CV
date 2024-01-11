@@ -30,10 +30,10 @@ github_username:  jognwonKim-1997
 # googlescholar_username: D847cGsAAAAJ
 
 # Additional icon links
- additional_links:
-- title: Link name
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-  url: Link url (eg. https://google.com)
+# additional_links:
+#- title: Link name
+#  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
+#  url: Link url (eg. https://google.com)
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
 #   url: Link url (eg. https://google.com)
@@ -48,9 +48,7 @@ github_username:  jognwonKim-1997
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/jongwonkim.jpg
 about_content: | # this will include new lines to allow paragraphs
-Hi, I'm jongwon kim, Ph.D student of Pohang university of Science and Technology (POSTECH). I have interest for any probablistic modeling (Gaussian process, Bayesian modeling) 
-and some application (Constrained Bayesian optimization, Anomaly detection, noise filtering, etc.). I collaborate projects with Samsung electronics, SK Hynix, POSCO, KETI, etc.
-There are so many interesting and fascenating research topics in the world. but  Previously, I studied various industrial management engineering problems and machine learning, but recently I have been studying a lot of topics focusing on problem related quality & statistics & reliability.
+Hi, I'm jongwon kim, Ph.D student of Pohang university of Science and Technology (POSTECH). I have interest for any probablistic modeling (Gaussian process, Bayesian modeling) and some application (Constrained Bayesian optimization, Anomaly detection, noise filtering, etc.). I collaborate projects with Samsung electronics, SK Hynix, POSCO, KETI, etc. There are so many interesting and fascenating research topics in the world. but  Previously, I studied various industrial management engineering problems and machine learning, but recently I have been studying a lot of topics focusing on problem related quality & statistics & reliability.
 #  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
 
 #  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
