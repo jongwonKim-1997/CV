@@ -61,36 +61,28 @@ content:
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
+      - layout: right
         title: Samsung electronics
         quote: >
           Probablistic modeling for part of manufacturing system.
         description: | # this will include new lines to allow paragraphs
           project manager, online model, 
           
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
+      - layout: right
         title: SK Hynix
         quote: >
           Implemetning anomaly detection model based on manufacturing sensor data.
         description: | # this will include new lines to allow paragraphs
           project manager, timeseries model
           
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
+      - layout: right
         title: POSCO
         quote: >
           Regression modeling
         description: | # this will include new lines to allow paragraphs
           project manager, regression model
           
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
+      - layout: right
         title: KETI
         quote: >
           Fish probablistic modeling
@@ -122,7 +114,7 @@ content:
         sub_title: Internship
         caption: 2018.07 -2018.08
         quote: >
-          Short description of the company (optional)
+          the Korea's largest IT company
         description: | # this will include new lines to allow paragraphs
           User feedback
       - layout: right
