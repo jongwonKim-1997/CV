@@ -66,49 +66,82 @@ content:
       - layout: left
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
-        additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        title: Samsung electronics
         quote: >
-          Short overview of the project (optional)
+          Probablistic modeling for part of manufacturing system.
         description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+          project manager, online model, 
+          
+      - layout: left
+        border: weak  # Value of `weak` will display a weak border below this item. # Any 
+                      # other value (or no value) means no border will be displayed
+        title: SK Hynix
+        quote: >
+          Implemetning anomaly detection model based on manufacturing sensor data.
+        description: | # this will include new lines to allow paragraphs
+          project manager, timeseries model
+          
+      - layout: left
+        border: weak  # Value of `weak` will display a weak border below this item. # Any 
+                      # other value (or no value) means no border will be displayed
+        title: POSCO
+        quote: >
+          Regression modeling
+        description: | # this will include new lines to allow paragraphs
+          project manager, regression model
+          
+      - layout: left
+        border: weak  # Value of `weak` will display a weak border below this item. # Any 
+                      # other value (or no value) means no border will be displayed
+        title: KETI
+        quote: >
+          Fish probablistic modeling
+        description: | # this will include new lines to allow paragraphs
+          project manager, Association problem, survival analysis
+          
+      #- layout: left
+      #  border: weak  # Value of `weak` will display a weak border below this item. # Any 
+      #                # other value (or no value) means no border will be displayed
+      #  title: Project name
+      #  link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+      #  link_text: Link Text
+      #  additional_links:
+      #    - title:  Github page for project (eg. sproogen/modern-resume-theme)
+      #      icon: fab fa-github
+      #      url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+      #    - title:  Github page for project (eg. sproogen/modern-resume-theme)
+      #      icon: fab fa-github
+      #      url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+      #  quote: >
+      #    Short overview of the project (optional)
+      #  description: | # this will include new lines to allow paragraphs
+      #    Description about the work on/with the project
   - title: Experience
     layout: list
     content:
       - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
+        title: Naver
+        sub_title: Internship
+        caption: 2018.07 -2018.08
         quote: >
           Short description of the company (optional)
         description: | # this will include new lines to allow paragraphs
-          Description of role
-    content:
+          User feedback
       - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
+        title: SMARF
+        sub_title: Internship
+        caption: 2019.06 -2019.08
         quote: >
-          Short description of the company (optional)
+          Start-up company for smart-farm
         description: | # this will include new lines to allow paragraphs
-          Description of role
+          Implement a bug classification model on small single-board computer. Collect bug (:honeybee:) data in the field.
   - title: Education
     layout: list
     content:
       - layout: top-right
-        title: Institution name
+        title: POSTECH
         sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
+        caption: 2015.03 - 2020.02
         quote: >
           Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
@@ -116,7 +149,15 @@ content:
       - layout: top-right
         title: Institution name2
         sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
+        caption: 2020.03 - 2022.02
+        quote: >
+          Short institution or course description (optional)
+        description: | # this will include new lines to allow paragraphs
+          Description of qualification
+      - layout: top-right
+        title: POSTECH
+        sub_title: Qualifications (eg. BA Performing Arts)
+        caption: 2020.03 - 2022.02
         quote: >
           Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
@@ -124,10 +165,8 @@ content:
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
-
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
-
+      Book collector, Survivor of the Heroes of the Storm, Big fan of Nongshim Red Force (Korean e-sports team)
+      
 # Footer
 footer_show_references: true
 # references_title: References on request (Override references text)
