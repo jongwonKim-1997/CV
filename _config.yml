@@ -163,7 +163,7 @@ content:
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
-      Book collector, Survivor of the Heroes of the Storm, Big fan of Nongshim Red Force (Korean e-sports team)
+      Book collector, Big fan of Nongshim Red Force (Korean e-sports team), 
       
 # Footer
 footer_show_references: true
