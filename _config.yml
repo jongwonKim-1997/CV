@@ -8,7 +8,7 @@ version: 2
 # Personal info
 name: Jongwon Kim
 title: POSTECH Ph.D student
-email:  jongwon.kim@lstlab.org, pioneer0517@postech.ac.kr
+email: jongwon.kim@lstlab.org, pioneer0517@postech.ac.kr
 # email_title: Email (Email title override)
 
 # Dark Mode (true/false/never)
@@ -69,34 +69,6 @@ content:
           Probablistic modeling for part of manufacturing system.
         description: | # this will include new lines to allow paragraphs
           project manager, online model, 
-          
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: SK Hynix
-        quote: >
-          Implemetning anomaly detection model based on manufacturing sensor data.
-        description: | # this will include new lines to allow paragraphs
-          project manager, timeseries model
-          
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: POSCO
-        quote: >
-          Regression modeling
-        description: | # this will include new lines to allow paragraphs
-          project manager, regression model
-          
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: KETI
-        quote: >
-          Fish probablistic modeling
-        description: | # this will include new lines to allow paragraphs
-          project manager, Association problem, survival analysis
-          
       #- layout: left
       #  border: weak  # Value of `weak` will display a weak border below this item. # Any 
       #                # other value (or no value) means no border will be displayed
@@ -125,14 +97,6 @@ content:
           Short description of the company (optional)
         description: | # this will include new lines to allow paragraphs
           User feedback
-      - layout: right
-        title: SMARF
-        sub_title: Internship
-        caption: 2019.06 -2019.08
-        quote: >
-          Start-up company for smart-farm
-        description: | # this will include new lines to allow paragraphs
-          Implement a bug classification model on small single-board computer. Collect bug (:honeybee:) data in the field.
   - title: Education
     layout: list
     content:
@@ -140,22 +104,6 @@ content:
         title: POSTECH
         sub_title: Qualifications (eg. BA Performing Arts)
         caption: 2015.03 - 2020.02
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
-      - layout: top-right
-        title: Institution name2
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: 2020.03 - 2022.02
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
-      - layout: top-right
-        title: POSTECH
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: 2020.03 - 2022.02
         quote: >
           Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
