@@ -132,34 +132,28 @@ content:
         quote: >
           Start-up company for smart-farm
         description: | # this will include new lines to allow paragraphs
-          Implement a bug classification model on small single-board computer. Collect bug (:honeybee:) data in the field.
+          Implement a bug classification model on small single-board computer. Collect bug :honeybee: data in the field.
   - title: Education
     layout: list
     content:
       - layout: top-right
         title: POSTECH
-        sub_title: Industrial management and enginnering and Mathematics BAs
+        sub_title: Industrial management and engineering and Mathematics B.A.
         caption: 2015.03 - 2020.02
         quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
+          Double majors
       - layout: top-right
         title: POSTECH
-        sub_title:  Industrial management and enginnering Ms.
+        sub_title:  Industrial management and engineering M.s.
         caption: 2020.03 - 2022.02
         quote: >
           Thesis: Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
       - layout: top-right
         title: POSTECH
         sub_title:  Industrial management and enginnering Ph.D.
         caption: 2022.02 -
         quote: >
           Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
