@@ -15,19 +15,19 @@ email:  jongwon.kim@lstlab.org, pioneer0517@postech.ac.kr
 darkmode: false
 
 # Social links
-twitter_username: jekyllrb
+# twitter_username: jekyllrb
 github_username:  jognwonKim-1997
-stackoverflow_username: "00000001"
-dribbble_username: jekyll
-facebook_username: jekyll
-flickr_username: jekyll
-instagram_username: jekyll
-linkedin_username: jekyll
-xing_username: jekyll
-pinterest_username: jekyll
-youtube_username: jekyll
-orcid_username: 0000-0000-0000-0000
-googlescholar_username: D847cGsAAAAJ
+# stackoverflow_username: "00000001"
+# dribbble_username: jekyll
+# facebook_username: jekyll
+# flickr_username: jekyll
+# instagram_username: jekyll
+# linkedin_username: jekyll
+# xing_username: jekyll
+# pinterest_username: jekyll
+# youtube_username: jekyll
+# orcid_username: 0000-0000-0000-0000
+# googlescholar_username: D847cGsAAAAJ
 
 # Additional icon links
 # additional_links:
@@ -48,13 +48,16 @@ googlescholar_username: D847cGsAAAAJ
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/jongwonkim.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
+Hi, I'm jongwon kim, Ph.D student of Pohang university of Science and Technology (POSTECH). I have interest for any probablistic modeling (Gaussian process, Bayesian modeling) 
+and some application (Constrained Bayesian optimization, Anomaly detection, noise filtering, etc.). I collaborate projects with Samsung electronics, SK Hynix, POSCO, KETI, etc.
+There are so many interesting and fascenating research topics in the world. but  Previously, I studied various industrial management engineering problems and machine learning, but recently I have been studying a lot of topics focusing on problem related quality & statistics & reliability.
+#  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
 
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
+#  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
+#    - Lists
+#   - Tables
+#    - <a href="google.com">Links</a>
+#    - Images ![alt text](/images/landscape-trees.jpg "Trees")
 
 content:
   - title: Projects # Title for the section
@@ -79,6 +82,16 @@ content:
           Description about the work on/with the project
   - title: Experience
     layout: list
+    content:
+      - layout: right
+        title: Company name
+        sub_title: Job title
+        caption: Date Range (eg. November 2016 - present)
+        link: Link to company (optional)
+        quote: >
+          Short description of the company (optional)
+        description: | # this will include new lines to allow paragraphs
+          Description of role
     content:
       - layout: right
         title: Company name
