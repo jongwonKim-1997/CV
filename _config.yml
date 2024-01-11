@@ -146,6 +146,33 @@ content:
         caption: 2022.02 -
         quote: >
           Class of 2026
+  - title: Publications
+    layout: list
+    content:
+      - layout: top-right
+        title:  A probabilistic fish growth model for a smart aquaculture system
+        sub_title: KSII Transactions on Internet and Information Systems
+        caption:  Kim, J., Park, E., Cho, S., Kwon, K. and Ko, Y. M.* 
+      - layout: top-right
+        title: Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
+        sub_title:  submitted
+        caption:  Kim, J., Lee.H.Y and Ko. Y. M.* 
+      - layout: top-right
+        title: Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process 
+        sub_title:  working
+        caption: Kim, J., Baik, S. M. Ko, Y. M.* 
+  - title: Awards
+    layout: list
+    content:
+      - layout: top-right
+        title: 2022 ICONI conference outstanding paper award
+        sub_title: Receive award for the paper entitled "A probabilistic fish growth model for a smart aquaculture system" 
+      - layout: top-right
+        title: 2021 Korea Data Information Science Society Spring Conference Best Poster Award
+        sub_title:  Constrained clustering via black box optimization
+      - layout: top-right
+        title: 2020 POSECH OPEN INNOVATION BIG DATA CHALLENGE 1st prize
+        sub_title:  Time series prediction for solar power generation         
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
