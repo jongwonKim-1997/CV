@@ -62,32 +62,34 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: right
-        title: Samsung electronics (2021-06 ~ 2022-01)
-        quote: >
-          Probablistic modeling for part of manufacturing system.
+        title: Samsung electronics 
+        sub_title: Probablistic modeling for part of manufacturing system.
+        caption:  2021-06 ~ 2022-01
         description: | # this will include new lines to allow paragraphs
           Project manager, probablistic model 
           
       - layout: right
-        title: SK Hynix (2023-03 ~ 2023-10)
-        quote: >
-          Implemetning anomaly detection model based on manufacturing sensor data.
+        title: KETI 
+        sub_title: Fish probablistic modeling
+        caption: 2021-07 ~ 2021-11, 2022-07 ~ 2022-11, 2023-09 ~ 2023-11
+        description: | # this will include new lines to allow paragraphs
+          Project manager, association problem, survival analysis
+          
+      - layout: right
+        title: SK Hynix 
+        sub_title: Implemetning anomaly detection model based on manufacturing sensor data.
+        caption: 2023-03 ~ 2023-10
         description: | # this will include new lines to allow paragraphs
           Project manager, timeseries anomaly detection
           
       - layout: right
-        title: POSCO (2023-03 ~ 2023-11)
-        quote: >
-          Regression modeling
+        title: POSCO 
+        sub_title: Regression modeling
+        caption: 2023-03 ~ 2023-11
         description: | # this will include new lines to allow paragraphs
           Project manager, regression model
           
-      - layout: right
-        title: KETI (2021-07 ~ 2021-11, 2022-07 ~ 2022-11, 2023-09 ~ 2023-11)
-        quote: >
-          Fish probablistic modeling
-        description: | # this will include new lines to allow paragraphs
-          Project manager, association problem, survival analysis
+
           
       #- layout: left
       #  border: weak  # Value of `weak` will display a weak border below this item. # Any 
