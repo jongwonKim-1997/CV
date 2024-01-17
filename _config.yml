@@ -63,7 +63,8 @@ content:
     content:
       - layout: right
         title: Samsung electronics 
-        caption:  2021-06 ~ 2022-01
+        caption: >
+           2021-06 ~ 2022-01
         quote: >
            Probablistic modeling for part of manufacturing system.
         description: | # this will include new lines to allow paragraphs
@@ -71,7 +72,8 @@ content:
           
       - layout: right
         title: KETI 
-        caption: <2021-07 ~ 2021-11, 2022-07 ~ 2022-11, 2023-09 ~ 2023-11>
+        caption: >
+           2021-07 ~ 2021-11, 2022-07 ~ 2022-11, 2023-09 ~ 2023-11
         quote: >
            Fish probablistic modeling
         description: | # this will include new lines to allow paragraphs
@@ -79,7 +81,8 @@ content:
           
       - layout: right
         title: SK Hynix 
-        caption: 2023-03 ~ 2023-10
+        caption: >
+           2023-03 ~ 2023-10
         quote: >
            Implemetning anomaly detection model based on manufacturing sensor data.
         description: | # this will include new lines to allow paragraphs
@@ -87,7 +90,8 @@ content:
           
       - layout: right
         title: POSCO 
-        caption: 2023-03 ~ 2023-11
+        caption: >
+           2023-03 ~ 2023-11
         quote: >
            Regression modeling
         description: | # this will include new lines to allow paragraphs
