@@ -64,7 +64,7 @@ content:
       - layout: right
         title: Samsung electronics 
         caption: 
-          2021-06 ~ 2022-01
+          2021.06 - 2022.01
         quote: >
            Probablistic modeling for part of manufacturing system.
         description: | # this will include new lines to allow paragraphs
@@ -73,9 +73,9 @@ content:
       - layout: right
         title: KETI 
         caption: 
-           2021-07 ~ 2021-11 
-           2022-07 ~ 2022-11
-           2023-09 ~ 2023-11
+           2021.07 - 2021.11 
+           2022.07 - 2022.11
+           2023.09 - 2023.11
         quote: >
            Fish probablistic modeling
         description: | # this will include new lines to allow paragraphs
@@ -84,7 +84,7 @@ content:
       - layout: right
         title: SK Hynix 
         caption: 
-          2023-03 ~ 2023-10
+          2023.03 - 2023.10
         quote: >
            Implemetning anomaly detection model based on manufacturing sensor data.
         description: | # this will include new lines to allow paragraphs
@@ -93,7 +93,7 @@ content:
       - layout: right
         title: POSCO 
         caption: 
-          2023-03 ~ 2023-11
+          2023.03 - 2023.11
         quote: >
            Regression modeling
         description: | # this will include new lines to allow paragraphs
@@ -124,7 +124,7 @@ content:
       - layout: right
         title: Naver
         sub_title: Internship
-        caption: 2018.07 -2018.08
+        caption: 2018.07 - 2018.08
         quote: >
           the Korea's largest IT company
         description: | # this will include new lines to allow paragraphs
@@ -132,7 +132,7 @@ content:
       - layout: right
         title: SMARF
         sub_title: Internship
-        caption: 2019.06 -2019.08
+        caption: 2019.06 - 2019.08
         quote: >
           Start-up company for smart-farm
         description: | # this will include new lines to allow paragraphs
