@@ -136,7 +136,7 @@ content:
         quote: >
           Start-up company for smart-farm
         description: | # this will include new lines to allow paragraphs
-          Implement a bug classification model on small single-board computer. Collect bug :honeybee: data in the field.
+          Implement a bug classification model on small single-board computer. Collect bug data in the field.
   - title: Education
     layout: list
     content:
