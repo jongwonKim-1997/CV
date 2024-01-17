@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Jongwon Kim
-title: POSTECH Ph.D student
+title: POSTECH Ph.D. student
 email:  jongwon.kim@lstlab.org, pioneer0517@postech.ac.kr
 # email_title: Email (Email title override)
 
@@ -62,32 +62,32 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: right
-        title: Samsung electronics
+        title: Samsung electronics (2021-06 ~ 2022-01)
         quote: >
           Probablistic modeling for part of manufacturing system.
         description: | # this will include new lines to allow paragraphs
-          project manager, online model, 
+          Project manager, probablistic model 
           
       - layout: right
-        title: SK Hynix
+        title: SK Hynix (2023-03 ~ 2023-10)
         quote: >
           Implemetning anomaly detection model based on manufacturing sensor data.
         description: | # this will include new lines to allow paragraphs
-          project manager, timeseries model
+          Project manager, timeseries anomaly detection
           
       - layout: right
-        title: POSCO
+        title: POSCO (2023-03 ~ 2023-11)
         quote: >
           Regression modeling
         description: | # this will include new lines to allow paragraphs
-          project manager, regression model
+          Project manager, regression model
           
       - layout: right
-        title: KETI
+        title: KETI (2021-07 ~ 2021-11, 2022-07 ~ 2022-11, 2023-09 ~ 2023-11)
         quote: >
           Fish probablistic modeling
         description: | # this will include new lines to allow paragraphs
-          project manager, Association problem, survival analysis
+          Project manager, association problem, survival analysis
           
       #- layout: left
       #  border: weak  # Value of `weak` will display a weak border below this item. # Any 
@@ -168,7 +168,7 @@ content:
         title: 2022 ICONI conference outstanding paper award
         sub_title: Receive award for the paper entitled "A probabilistic fish growth model for a smart aquaculture system" 
       - layout: top-right
-        title: 2021 Korea Data Information Science Society Spring Conference Best Poster Award
+        title: 2021 Korea Data Information Science Society Spring Conference Best Poster Award (1st)
         sub_title:  Constrained clustering via black box optimization
       - layout: top-right
         title: 2020 POSECH OPEN INNOVATION BIG DATA CHALLENGE 1st prize
