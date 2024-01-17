@@ -71,7 +71,7 @@ content:
           
       - layout: right
         title: KETI 
-        caption: 2021-07 ~ 2021-11, 2022-07 ~ 2022-11, 2023-09 ~ 2023-11
+        caption: <2021-07 ~ 2021-11, 2022-07 ~ 2022-11, 2023-09 ~ 2023-11>
         quote: >
            Fish probablistic modeling
         description: | # this will include new lines to allow paragraphs
