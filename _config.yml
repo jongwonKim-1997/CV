@@ -81,15 +81,7 @@ content:
         description: | # this will include new lines to allow paragraphs
           Project manager, association problem, survival analysis
           
-      - layout: right
-        title: SK Hynix 
-        caption: 
-          2023.03 - 2023.10
-        quote: >
-           Implemetning anomaly detection model based on manufacturing sensor data.
-        description: | # this will include new lines to allow paragraphs
-          Project manager, timeseries anomaly detection
-          
+         
       - layout: right
         title: POSCO 
         caption: 
@@ -98,8 +90,25 @@ content:
            Regression modeling
         description: | # this will include new lines to allow paragraphs
           Project manager, regression model
-          
+      
+      - layout: right
+        title: SK Hynix 
+        caption: 
+          2023.03 - 2023.10
+          2024.03 - 2024.10
+        quote: >
+           Implemetning anomaly detection model based on timeseries sensor data.
+        description: | # this will include new lines to allow paragraphs
+          Project manager, timeseries anomaly detection          
 
+      - layout: right
+        title: Samsung research
+        caption: 
+          2024.05 - 2025.05
+        quote: >
+           Modeling graph neural network
+        description: | # this will include new lines to allow paragraphs
+          Project member, Graph modeling
           
       #- layout: left
       #  border: weak  # Value of `weak` will display a weak border below this item. # Any 
@@ -167,7 +176,7 @@ content:
         caption:  Kim, J., Park, E., Cho, S., Kwon, K. and Ko, Y. M.* 
       - layout: top-right
         title: Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
-        sub_title:  submitted
+        sub_title:  Knowledge-Based Systems
         caption:  Kim, J., Lee.H.Y and Ko. Y. M.* 
       - layout: top-right
         title: Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process 
