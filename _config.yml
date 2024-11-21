@@ -185,6 +185,9 @@ content:
   - title: Awards
     layout: list
     content:
+    - layout: top-right
+        title: 2024 Postechian Fellowship - innovation section
+        sub_title: Receive scholarship with 6,000,000 ₩ 
       - layout: top-right
         title: 2022 ICONI conference outstanding paper award
         sub_title: Receive award for the paper entitled "A probabilistic fish growth model for a smart aquaculture system" 
