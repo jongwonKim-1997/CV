@@ -185,7 +185,7 @@ content:
   - title: Awards
     layout: list
     content:
-    - layout: top-right
+      - layout: top-right
         title: 2024 Postechian Fellowship, Innovation Category
         sub_title: Receive scholarship with 6,000,000 won
       - layout: top-right
