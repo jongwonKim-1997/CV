@@ -48,7 +48,8 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/jongwonkim.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, I'm Jongwon Kim, a Ph.D. student at the Pohang University of Science and Technology (POSTECH). My academic interests lie in probabilistic model, including Gaussian processes and Bayesian modeling, along with their applications in areas such as Constrained Bayesian optimization, anomaly detection, and timeseries analysis. I have a rich experience in collaborating on projects with major companies like Samsung Electronics, SK Hynix, POSCO, and KETI. My studies have spanned a variety of topics in industrial management engineering and machine learning. Recently, I have honed my focus on research that emphasizes quality, statistics, and reliability, seeking to contribute significant advancements in these areas.
+  Hi, I'm Jongwon Kim, a Ph.D. student at POSTECH. My research interests lie in time series foundation models for multi-task learning, including forecasting and anomaly detection. I also focus on probabilistic models, such as Gaussian processes and Bayesian modeling, and their applications in areas like Bayesian optimization. I have extensive experience collaborating on projects with major industry leaders like Samsung Electronics, SK Hynix, POSCO, and KETI. While my studies have spanned various topics in Industrial Management Engineering and Machine Learning, I currently focus on research emphasizing Quality, Statistics, and Reliability (QSR), aiming to contribute significant advancements to these fields.
+
 #  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
 
 #  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
@@ -110,6 +111,16 @@ content:
         description: | # this will include new lines to allow paragraphs
           Project member, Graph modeling
           
+      - layout: right
+        title: Ministry of Trade, Industry and Resources 
+        caption: 
+          2025.08 - 2028.02
+        quote: >
+           Development of Core Technologies for Manufacturing Foundation Models.
+        description: | # this will include new lines to allow paragraphs
+          Project manager, timeseries foundation model 
+
+         
       #- layout: left
       #  border: weak  # Value of `weak` will display a weak border below this item. # Any 
       #                # other value (or no value) means no border will be displayed
@@ -179,9 +190,13 @@ content:
         sub_title:  Knowledge-Based Systems
         caption:  Kim, J., Lee.H.Y and Ko. Y. M.* 
       - layout: top-right
+        title:  Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models
+        sub_title: International Conference on Learning Representations (ICLR)
+        caption: Kim, J., Ko, Y. M.*, Yoon, S., Kim, Y., Kim, S. I., Tae, J.
+      - layout: top-right
         title: Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process 
-        sub_title:  working
-        caption: Kim, J., Baik, S. M. Ko, Y. M.* 
+        sub_title:  Submitted to IEEE Transactions on Semiconductor Manufacturing (Under minor revision)
+        caption: Kim, J., Baik, S. M., Yu, D., Kim, J., Ko, Y. M.* 
   - title: Awards
     layout: list
     content:
