@@ -183,15 +183,15 @@ content:
     content:
       - layout: top-right
         title:  A probabilistic fish growth model for a smart aquaculture system
-        sub_title: KSII Transactions on Internet and Information Systems
+        sub_title: KSII Transactions on Internet and Information Systems, 2024
         caption:  Kim, J., Park, E., Cho, S., Kwon, K. and Ko, Y. M.* 
       - layout: top-right
         title: Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
-        sub_title:  Knowledge-Based Systems
+        sub_title:  Knowledge-Based Systems, 2025
         caption:  Kim, J., Lee.H.Y and Ko. Y. M.* 
       - layout: top-right
         title:  Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models
-        sub_title: International Conference on Learning Representations (ICLR)
+        sub_title: International Conference on Learning Representations (ICLR), 2026
         caption: Kim, J., Ko, Y. M.*, Yoon, S., Kim, Y., Kim, S. I., Tae, J.
       - layout: top-right
         title: Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process 
@@ -201,17 +201,17 @@ content:
     layout: list
     content:
       - layout: top-right
-        title: 2024 Postechian Fellowship
-        sub_title: Receive scholarship with 6,000,000 won
-      - layout: top-right
-        title: 2022 ICONI conference outstanding paper award
-        sub_title: Receive award for the paper entitled "A probabilistic fish growth model for a smart aquaculture system" 
+        title: 2020 POSECH OPEN INNOVATION BIG DATA CHALLENGE prize (1st)
+        sub_title:  Time series prediction for solar power generation    
       - layout: top-right
         title: 2021 Korea Data Information Science Society Spring Conference Best Poster Award (1st)
         sub_title:  Constrained clustering via black box optimization
       - layout: top-right
-        title: 2020 POSECH OPEN INNOVATION BIG DATA CHALLENGE prize (1st)
-        sub_title:  Time series prediction for solar power generation         
+        title: 2022 ICONI conference outstanding paper award
+        sub_title: Receive award for the paper entitled "A probabilistic fish growth model for a smart aquaculture system" 
+      - layout: top-right
+        title: 2024 Postechian Fellowship
+        sub_title: Receive scholarship with 6,000,000 won
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
