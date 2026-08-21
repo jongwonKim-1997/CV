@@ -178,7 +178,7 @@ content:
         caption: 2022.02 -
         description: | # this will include new lines to allow paragraphs
           Class of 2026
-  - title: Publications
+ - title: Publications
     layout: list
     content:
       - layout: top-right
@@ -188,15 +188,19 @@ content:
       - layout: top-right
         title: Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
         sub_title:  Knowledge-Based Systems, 2025
-        caption:  Kim, J., Lee.H.Y and Ko. Y. M.* 
+        caption:  Kim, J., Lee, H. Y. and Ko, Y. M.* 
       - layout: top-right
         title:  Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models
         sub_title: International Conference on Learning Representations (ICLR), 2026
         caption: Kim, J., Ko, Y. M.*, Yoon, S., Kim, Y., Kim, S. I., Tae, J.
       - layout: top-right
-        title: Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process 
-        sub_title:  Submitted to IEEE Transactions on Semiconductor Manufacturing (Under minor revision)
+        title:  Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process 
+        sub_title: IEEE Transactions on Semiconductor Manufacturing, 2026
         caption: Kim, J., Baik, S. M., Yu, D., Kim, J., Ko, Y. M.* 
+      - layout: top-right
+        title:  Patch-based Memory Gate Model in Time Series Foundation Model
+        sub_title: Transactions on Machine Learning Research (TMLR), 2026
+        caption: Yoon, S., Kim, J., Ha, J. and Ko, Y. M.*
   - title: Awards
     layout: list
     content:
