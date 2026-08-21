@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Jongwon Kim
-title: POSTECH Ph.D. student
+title: Postdoctoral Researcher, POSTECH
 email:  jongwon.kim@lstlab.org, pioneer0517@postech.ac.kr
 # email_title: Email (Email title override)
 
@@ -48,8 +48,7 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/jongwonkim.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, I'm Jongwon Kim, a Ph.D. student at POSTECH. My research interests lie in time series foundation models for diverse downstream tasks, including forecasting and anomaly detection. I also focus on probabilistic models, such as Gaussian processes and Bayesian modeling, and their applications in areas like Bayesian optimization. I have extensive experience collaborating on projects with major industry leaders like Samsung Electronics, SK Hynix, POSCO, and KETI. While my studies have spanned various topics in Industrial Management Engineering and Machine Learning, I currently focus on research emphasizing Quality, Statistics, and Reliability (QSR), aiming to contribute significant advancements to these fields.
-
+    Hi, I'm Jongwon Kim. I recently completed my Ph.D. in Industrial and Management Engineering at POSTECH (August 2026) and am now a postdoctoral researcher at the POSTECH Future IT Innovation Lab. My research centers on time series foundation models for downstream tasks such as forecasting and anomaly detection, along with probabilistic models like Gaussian processes and Bayesian modeling and their use in Bayesian optimization. Through collaborations with Samsung Electronics, SK Hynix, POSCO, and KETI, I work at the intersection of machine learning and Quality, Statistics, and Reliability (QSR).
 #  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
 
 #  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
@@ -162,22 +161,26 @@ content:
     content:
       - layout: top-right
         title: POSTECH
-        sub_title: Industrial management and engineering and Mathematics B.A.
+        sub_title: Industrial and Management Engineering and Mathematics B.A.
         caption: 2015.03 - 2020.02
         description: | # this will include new lines to allow paragraphs
           Double majors
       - layout: top-right
         title: POSTECH
-        sub_title:  Industrial management and engineering M.S.
+        sub_title:  Industrial and Management Engineering M.S.
         caption: 2020.03 - 2022.02
         description: | # this will include new lines to allow paragraphs
           Thesis: Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
       - layout: top-right
         title: POSTECH
-        sub_title:  Industrial management and enginnering Ph.D.
-        caption: 2022.02 -
+        sub_title:  Industrial and Management Engineering Ph.D.
+        caption: 2022.02 - 2026.08
         description: | # this will include new lines to allow paragraphs
-          Class of 2026
+          Thesis: Toward Robust Anomaly Detection with Time-Series Foundation Models: Improving Anomaly Separability through Provable Mean Separation and Variance Reduction
+      - layout: top-right
+        title: POSTECH Future IT Innovation Lab.
+        sub_title: Postdoc
+        caption: 2026.09 - 
   - title: Publications
     layout: list
     content:
@@ -216,6 +219,9 @@ content:
       - layout: top-right
         title: 2024 Postechian Fellowship
         sub_title: Receive scholarship with 6,000,000 won
+      - layout: top-right
+        title: 2026 PIURI Scholarship
+        sub_title: Receive scholarship from POSTECH
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
