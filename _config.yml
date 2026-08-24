@@ -48,7 +48,7 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/jongwonkim.jpg
 about_content: | # this will include new lines to allow paragraphs
-    Hi, I'm Jongwon Kim. I recently completed my Ph.D. in Industrial and Management Engineering at POSTECH (August 2026) and am now a postdoctoral researcher at the POSTECH Future IT Innovation Lab. My research centers on time series foundation models for downstream tasks such as forecasting and anomaly detection, along with probabilistic models like Gaussian processes and Bayesian modeling and their use in Bayesian optimization. Through collaborations with Samsung Electronics, SK Hynix, POSCO, and KETI, I work at the intersection of machine learning and Quality, Statistics, and Reliability (QSR).
+    Hi, I'm Jongwon Kim. I recently completed my Ph.D. in Industrial and Management Engineering at POSTECH (August 2026) and am now a postdoctoral researcher at the POSTECH Future IT Innovation Lab. My research centers on time series foundation models: adapting them to diverse downstream tasks such as forecasting and anomaly detection, and applying them to real-world problems in manufacturing. I also work on probabilistic models, including Gaussian processes and Bayesian modeling, and their use in Bayesian optimization. Through collaborations with Samsung Electronics, SK Hynix, POSCO, and KETI, I work at the intersection of machine learning and Quality, Statistics, and Reliability (QSR).
 #  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
 
 #  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
@@ -178,8 +178,8 @@ content:
         description: | # this will include new lines to allow paragraphs
           Thesis: Toward Robust Anomaly Detection with Time-Series Foundation Models: Improving Anomaly Separability through Provable Mean Separation and Variance Reduction
       - layout: top-right
-        title: POSTECH Future IT Innovation Lab.
-        sub_title: Postdoc
+        title: POSTECH 
+        sub_title: Future IT Innovation Lab. Postdoc
         caption: 2026.09 - 
   - title: Publications
     layout: list
