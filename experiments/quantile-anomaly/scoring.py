@@ -128,8 +128,14 @@ def _chol_solve(R: np.ndarray, B: np.ndarray, max_tries: int = 6):
 # ------------------------------------------------------------------ scores
 
 def all_scores(z: np.ndarray, q: np.ndarray, x: np.ndarray,
-               R_pert: np.ndarray, R_emp: np.ndarray) -> dict:
-    """z:(n,H)  q:(n,H,Q)  x:(n,H)  R_pert:(n,H,H) or (H,H)  R_emp:(H,H)."""
+               R_pert: np.ndarray, R_emp: np.ndarray,
+               band_from_z: bool = False, R_pool: np.ndarray | None = None) -> dict:
+    """z:(n,H)  q:(n,H,Q)  x:(n,H)  R_pert:(n,H,H) or (H,H)  R_emp:(H,H).
+
+    ``band_from_z`` computes S_band as |z| > Phi^-1(0.9) instead of comparing x
+    against the raw q10/q90; needed when z has been recalibrated, so the band
+    moves with the correction.
+    """
     n = z.shape[0]
     ones = np.ones((n, H, 1))
     zb = z[:, :, None]
@@ -147,20 +153,32 @@ def all_scores(z: np.ndarray, q: np.ndarray, x: np.ndarray,
 
     s_gls_pert, n_eff_pert, maha = gls(R_pert)
     s_gls_emp, n_eff_emp, _ = gls(R_emp)
+    # Pooled variant: one R built from the psi averaged over the windows of
+    # this (model, process, seed).  1' R^-1 1 is very sensitive to a handful
+    # of small negative off-diagonals, so a per-window psi estimated on a
+    # noisy learned model makes n_eff explode; pooling first removes that.
+    if R_pool is None:
+        R_pool = R_pert
+    s_gls_pool, n_eff_pool, _ = gls(R_pool)
 
-    qs = np.sort(q, axis=-1)
-    i10 = int(np.argmin(np.abs(QUANTILE_LEVELS - 0.10)))
-    i90 = int(np.argmin(np.abs(QUANTILE_LEVELS - 0.90)))
-    outside = (x < qs[..., i10]) | (x > qs[..., i90])
+    if band_from_z:
+        outside = np.abs(z) > norm.ppf(0.90)
+    else:
+        qs = np.sort(q, axis=-1)
+        i10 = int(np.argmin(np.abs(QUANTILE_LEVELS - 0.10)))
+        i90 = int(np.argmin(np.abs(QUANTILE_LEVELS - 0.90)))
+        outside = (x < qs[..., i10]) | (x > qs[..., i90])
 
     return {
         "S_max": np.max(np.abs(z), axis=1),
         "S_band": outside.mean(axis=1),
         "S_mean": np.abs(np.sqrt(H) * z.mean(axis=1)),
         "S_gls_pert": s_gls_pert,
+        "S_gls_pool": s_gls_pool,
         "S_gls_emp": s_gls_emp,
         "S_chi2": np.abs((z**2).sum(axis=1) - H) / np.sqrt(2 * H),
         "S_maha": maha,
         "n_eff": n_eff_pert,
+        "n_eff_pool": n_eff_pool,
         "n_eff_emp": n_eff_emp,
     }

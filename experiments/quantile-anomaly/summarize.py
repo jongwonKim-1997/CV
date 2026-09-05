@@ -14,7 +14,7 @@ for m in MODELS:
     for p in ["WN","RW","AR1","SEAS"]:
         t=(agg[(agg.model==m)&(agg.process==p)]
            .pivot(index="case",columns="score",values="auroc")
-           [["S_max","S_band","S_mean","S_gls_pert","S_gls_emp","S_chi2","S_maha"]])
+           [["S_max","S_band","S_mean","S_gls_pert","S_gls_pool","S_gls_emp","S_chi2","S_maha"]])
         print(f"\n-- {m} / {p} --"); print(t.round(3).to_string())
 
 block("2. TPR @ FPR 5%  (same layout)")
@@ -22,7 +22,7 @@ for m in MODELS:
     for p in ["WN","RW","AR1","SEAS"]:
         t=(agg[(agg.model==m)&(agg.process==p)]
            .pivot(index="case",columns="score",values="tpr5")
-           [["S_max","S_band","S_mean","S_gls_pert","S_gls_emp","S_chi2","S_maha"]])
+           [["S_max","S_band","S_mean","S_gls_pert","S_gls_pool","S_gls_emp","S_chi2","S_maha"]])
         print(f"\n-- {m} / {p} --"); print(t.round(3).to_string())
 
 block("3. H1/H2: WN, case A1 and A2 -- S_max vs S_gls_pert")
@@ -57,7 +57,8 @@ for m in MODELS:
 
 block("6. H5: n_eff and R distance; psi fidelity")
 d=(diag.groupby(["model","process"]).agg(
-    n_eff_pert=("n_eff_pert","mean"), n_eff_emp=("n_eff_emp","mean"),
+    n_eff_pert=("n_eff_pert","mean"), n_eff_pert_med=("n_eff_pert_med","mean"),
+    n_eff_pool=("n_eff_pool","mean"), n_eff_emp=("n_eff_emp","mean"),
     R_fro=("R_frobenius","mean")).reset_index())
 import scoring, data
 th={p: float(np.ones(32)@np.linalg.solve(
@@ -79,6 +80,13 @@ for m in MODELS:
               f"S_mean={s.loc['S_mean'].auroc:.3f} "
               f"S_gls_pert={s.loc['S_gls_pert'].auroc:.3f} "
               f"S_chi2={s.loc['S_chi2'].auroc:.3f}")
+
+block("7b. Nominal-threshold (1.96) exceedance rate -- the true SIZE on N0")
+nr=pd.read_csv(f"{RES}/nominal_rates.csv")
+t=(nr[nr.case=="N0"].pivot_table(index=["model","process"],columns="score",values="rate"))
+print("N0 (a correctly sized test gives 0.05):"); print(t.round(3).to_string())
+t=(nr[nr.case=="A1"].pivot_table(index=["model","process"],columns="score",values="rate"))
+print("\nA1 (detection rate at the SAME nominal threshold):"); print(t.round(3).to_string())
 
 block("8. Calibration of N0: z mean / var by horizon")
 for m in MODELS:

@@ -1,7 +1,7 @@
 """Full experiment driver: forecasts -> z -> R -> scores -> csv."""
 from __future__ import annotations
 
-import argparse, json, os, time
+import argparse, json, os, time, zlib
 import numpy as np
 import pandas as pd
 
@@ -14,9 +14,19 @@ CACHE = os.path.join(HERE, "cache")
 DIAG_H = (1, 8, 16, 32)
 
 
+def stable_seed(*parts) -> int:
+    """A seed that survives a restart.
+
+    Python's str hash is salted per process (PYTHONHASHSEED), so hash()-derived
+    seeds silently regenerate DIFFERENT windows on a rerun while the npz cache
+    still holds forecasts made for the old ones.  crc32 is stable.
+    """
+    return zlib.crc32("|".join(map(str, parts)).encode()) & 0xFFFFFFFF
+
+
 def windows_for(process, seed, n, n_emp):
     """Deterministic given (process, seed) so every model sees identical data."""
-    rng = np.random.default_rng(abs(hash((process, seed, "ctx"))) % (2**32))
+    rng = np.random.default_rng(stable_seed(process, seed, "ctx"))
     ctx, _, t0 = data.generate_windows(process, n, rng)
     mu, sd = data.oracle_moments(process, ctx, t0)
     fut = data.continue_from(process, ctx, t0, rng, 1.0)
@@ -85,28 +95,47 @@ def main():
                 q, psi, _ = forecast(model, proc, W["ctx"], W["t0"], tag,
                                      not args.no_cache)
                 R_pert = scoring.r_from_psi(psi)
+                R_pool = scoring.r_from_psi(psi.mean(0, keepdims=True))[0]
 
                 # ---- empirical R from a disjoint set of normal windows
                 qe = model.predict(proc, W["ectx"], W["et0"])
                 ze = scoring.to_z(qe, W["efut"])
                 R_emp = scoring.r_empirical(ze)
 
+                # Per-horizon recalibration learned on those same normal
+                # windows: z -> (z - mean_h) / std_h.  A perfectly calibrated
+                # model leaves this a no-op; it separates "the forecaster's
+                # intervals are the wrong width" from "the detector is wrong".
+                cal_m, cal_s = ze.mean(0), np.maximum(ze.std(0), 1e-6)
+                ze_cal = (ze - cal_m) / cal_s
+                R_emp_cal = scoring.r_empirical(ze_cal)
+                variants = [(model.name, False, None, R_emp)]
+                if not getattr(model, "analytic_psi", False):
+                    variants.append((model.name + "_CAL", True,
+                                     (cal_m, cal_s), R_emp_cal))
+
                 psi_store[(model.name, proc, seed)] = psi.mean(0)
                 Rp_mean = R_pert.mean(0)
                 fro = float(np.linalg.norm(Rp_mean - R_emp, "fro"))
 
                 for case in CASES:
-                    crng = np.random.default_rng(
-                        abs(hash((proc, seed, case))) % (2**32))
+                    crng = np.random.default_rng(stable_seed(proc, seed, case))
                     x = data.inject(case, W["fut"], W["mu"], W["sd"], crng,
                                     future_hivar=W["fut_hi"])
-                    z = scoring.to_z(q, x)
-                    sc = scoring.all_scores(z, q, x, R_pert, R_emp)
-                    for i in range(x.shape[0]):
-                        rows.append(dict(
-                            process=proc, model=model.name, case=case,
-                            seed=seed, window_id=i,
-                            **{k: float(v[i]) for k, v in sc.items()}))
+                    z_raw = scoring.to_z(q, x)
+                    for mname, is_cal, cal, Re in variants:
+                        z = (z_raw - cal[0]) / cal[1] if is_cal else z_raw
+                        sc = scoring.all_scores(z, q, x, R_pert, Re,
+                                                band_from_z=is_cal,
+                                                R_pool=R_pool)
+                        for i in range(x.shape[0]):
+                            rows.append(dict(
+                                process=proc, model=mname, case=case,
+                                seed=seed, window_id=i,
+                                **{k: float(v[i]) for k, v in sc.items()}))
+                    z = z_raw
+                    sc = scoring.all_scores(z_raw, q, x, R_pert, R_emp,
+                                            R_pool=R_pool)
                     if case == "N0":
                         pit_store[(model.name, proc, seed)] = \
                             scoring.pit(q, x)[:, [h - 1 for h in DIAG_H]]
@@ -119,6 +148,8 @@ def main():
                                 psi_theory=float(
                                     data.theoretical_psi(proc)[h + 1]),
                                 n_eff_pert=float(sc["n_eff"].mean()),
+                                n_eff_pert_med=float(np.median(sc["n_eff"])),
+                                n_eff_pool=float(sc["n_eff_pool"].mean()),
                                 n_eff_emp=float(sc["n_eff_emp"].mean()),
                                 R_frobenius=fro))
                 print(f"  {model.name:8s} {proc:5s} seed={seed}  "

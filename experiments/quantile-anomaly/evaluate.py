@@ -15,8 +15,8 @@ from data import H, PROCESSES, CASES
 HERE = os.path.dirname(os.path.abspath(__file__))
 RES, FIG = os.path.join(HERE, "results"), os.path.join(HERE, "figures")
 
-SCORES = ["S_max", "S_band", "S_mean", "S_gls_pert", "S_gls_emp",
-          "S_chi2", "S_maha"]
+SCORES = ["S_max", "S_band", "S_mean", "S_gls_pert", "S_gls_pool",
+          "S_gls_emp", "S_chi2", "S_maha"]
 # validated categorical slots 1-3 (all-pairs, light mode)
 C1, C2, C3 = "#2a78d6", "#eb6834", "#1baf7a"
 INK, INK2, GRID = "#0b0b0b", "#52514e", "#d9d8d4"
@@ -31,6 +31,32 @@ plt.rcParams.update({
 
 
 # ------------------------------------------------------------------ metrics
+
+NOMINAL = 1.959964          # two-sided 5% critical value of N(0,1)
+# Scores that are z-scale level tests, so 1.96 is what "independent horizons"
+# would tell you to use as a threshold without ever looking at normal data.
+LEVEL_SCORES = ["S_mean", "S_gls_pert", "S_gls_pool", "S_gls_emp"]
+
+
+def nominal_rates(df: pd.DataFrame) -> pd.DataFrame:
+    """Rate at which each level test exceeds the NOMINAL 1.96 threshold.
+
+    On N0 this is the test's true size: a correctly sized test gives 0.05.
+    S_mean assumes independent horizons, so on correlated processes its size
+    blows past 0.05 -- that inflation, not the empirically-thresholded TPR, is
+    what makes it unusable there.
+    """
+    out = []
+    for (proc, model, case, seed), g in df.groupby(
+            ["process", "model", "case", "seed"]):
+        for s in LEVEL_SCORES:
+            out.append(dict(process=proc, model=model, case=case, seed=seed,
+                            score=s, rate=float((g[s] > NOMINAL).mean())))
+    m = pd.DataFrame(out)
+    return (m.groupby(["process", "model", "case", "score"])
+             .agg(rate=("rate", "mean"), rate_sd=("rate", "std"))
+             .reset_index())
+
 
 def metrics(df: pd.DataFrame) -> pd.DataFrame:
     out = []
@@ -148,7 +174,8 @@ def fig_scores(df, models_):
 
 def fig_neff(diag, models_):
     d = (diag.groupby(["process", "model"])
-             .agg(pert=("n_eff_pert", "mean"), emp=("n_eff_emp", "mean"))
+             .agg(pert=("n_eff_pert", "mean"), pool=("n_eff_pool", "mean"),
+                  emp=("n_eff_emp", "mean"))
              .reset_index())
     th = {}
     for p in PROCESSES:
@@ -163,7 +190,7 @@ def fig_neff(diag, models_):
         ax = axes[0][k]
         sub = d[d.model == model].set_index("process").reindex(PROCESSES)
         series = [("theory", [th[p] for p in PROCESSES], C3),
-                  ("R_pert", sub["pert"].to_numpy(), C1),
+                  ("R_pert (pooled)", sub["pool"].to_numpy(), C1),
                   ("R_emp", sub["emp"].to_numpy(), C2)]
         for i, (lab, v, col) in enumerate(series):
             ax.bar(x + (i - 1) * w, v, w * 0.9, color=col, label=lab)
@@ -187,13 +214,17 @@ def main():
     diag = pd.read_csv(f"{RES}/diagnostics.csv")
     fd = np.load(f"{RES}/figdata.npz")
     models_ = list(dict.fromkeys(df.model))
+    # PIT / psi / n_eff diagnostics only exist for the models that actually
+    # produced forecasts; the _CAL variants reuse those same forecasts.
+    fig_models = list(dict.fromkeys(k.split("|")[0] for k in fd["pit_keys"]))
 
     per_seed, agg = metrics(df)
     per_seed.to_csv(f"{RES}/metrics_per_seed.csv", index=False)
     agg.to_csv(f"{RES}/metrics.csv", index=False)
+    nominal_rates(df).to_csv(f"{RES}/nominal_rates.csv", index=False)
 
-    fig_pit(fd, models_); fig_psi(fd, models_)
-    fig_scores(df, models_); fig_neff(diag, models_)
+    fig_pit(fd, fig_models); fig_psi(fd, fig_models)
+    fig_scores(df, models_); fig_neff(diag, fig_models)
     print(f"metrics rows {len(agg)};  figures -> {FIG}")
 
 
