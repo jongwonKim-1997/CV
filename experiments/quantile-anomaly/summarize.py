@@ -14,7 +14,7 @@ for m in MODELS:
     for p in ["WN","RW","AR1","SEAS"]:
         t=(agg[(agg.model==m)&(agg.process==p)]
            .pivot(index="case",columns="score",values="auroc")
-           [["S_max","S_band","S_mean","S_gls_pert","S_gls_pool","S_gls_emp","S_chi2","S_maha"]])
+           [["S_max","S_max_raw","S_band","S_mean","S_gls_pert","S_gls_pool","S_gls_ema","S_gls_hybrid","S_gls_emp","S_gls_b","S_chi2","S_maha"]])
         print(f"\n-- {m} / {p} --"); print(t.round(3).to_string())
 
 block("2. TPR @ FPR 5%  (same layout)")
@@ -22,7 +22,7 @@ for m in MODELS:
     for p in ["WN","RW","AR1","SEAS"]:
         t=(agg[(agg.model==m)&(agg.process==p)]
            .pivot(index="case",columns="score",values="tpr5")
-           [["S_max","S_band","S_mean","S_gls_pert","S_gls_pool","S_gls_emp","S_chi2","S_maha"]])
+           [["S_max","S_max_raw","S_band","S_mean","S_gls_pert","S_gls_pool","S_gls_ema","S_gls_hybrid","S_gls_emp","S_gls_b","S_chi2","S_maha"]])
         print(f"\n-- {m} / {p} --"); print(t.round(3).to_string())
 
 block("3. H1/H2: WN, case A1 and A2 -- S_max vs S_gls_pert")
@@ -58,7 +58,9 @@ for m in MODELS:
 block("6. H5: n_eff and R distance; psi fidelity")
 d=(diag.groupby(["model","process"]).agg(
     n_eff_pert=("n_eff_pert","mean"), n_eff_pert_med=("n_eff_pert_med","mean"),
-    n_eff_pool=("n_eff_pool","mean"), n_eff_emp=("n_eff_emp","mean"),
+    n_eff_pool=("n_eff_pool","mean"), n_eff_ema=("n_eff_ema","mean"),
+    n_eff_hybrid=("n_eff_hybrid","mean"), n_eff_b=("n_eff_b","mean"),
+    n_eff_emp=("n_eff_emp","mean"),
     R_fro=("R_frobenius","mean")).reset_index())
 import scoring, data
 th={p: float(np.ones(32)@np.linalg.solve(
@@ -87,6 +89,38 @@ t=(nr[nr.case=="N0"].pivot_table(index=["model","process"],columns="score",value
 print("N0 (a correctly sized test gives 0.05):"); print(t.round(3).to_string())
 t=(nr[nr.case=="A1"].pivot_table(index=["model","process"],columns="score",values="rate"))
 print("\nA1 (detection rate at the SAME nominal threshold):"); print(t.round(3).to_string())
+
+block("7c. Direction: A1 (z-space const) vs A1p (x-space const)")
+for m_ in MODELS:
+    for p in ["WN","RW","AR1","SEAS"]:
+        r=[]
+        for c in ["A1","A1p"]:
+            s=agg[(agg.model==m_)&(agg.process==p)&(agg.case==c)].set_index("score")
+            g=df[(df.model==m_)&(df.process==p)&(df.case==c)]
+            r.append(f"{c}: d=1 {s.loc['S_gls_pert'].auroc:.3f}/{g.S_gls_pert.mean():.3f}"
+                     f"  d=1/s {s.loc['S_gls_b'].auroc:.3f}/{g.S_gls_b.mean():.3f}")
+        print(f"  {m_:9s}/{p:5s} AUROC/mean  |  " + "  ||  ".join(r))
+print(f"\n  n_eff_b (matched direction) by process:")
+print(diag.groupby(["model","process"]).n_eff_b.mean().round(3).to_string())
+
+block("7d. S_max vs S_max_raw -- clipping-free point-wise baseline")
+for m_ in MODELS:
+    t=(agg[(agg.model==m_)&(agg.case.isin(["A1","A1p","A2","A3","A4"]))]
+       .pivot_table(index=["process","case"],columns="score",values="auroc")
+       [["S_max","S_max_raw","S_band","S_gls_pert"]])
+    print(f"\n-- {m_} --"); print(t.round(3).to_string())
+
+block("7e. R estimator comparison: n_eff and nominal size on N0")
+d2=(diag.groupby(["model","process"]).agg(
+    pert=("n_eff_pert","mean"), pool=("n_eff_pool","mean"),
+    ema=("n_eff_ema","mean"), hybrid=("n_eff_hybrid","mean"),
+    emp=("n_eff_emp","mean")).reset_index())
+print(d2.round(2).to_string(index=False))
+nr2=pd.read_csv(f"{RES}/nominal_rates.csv")
+print("\nnominal size on N0 (target 0.05):")
+print(nr2[nr2.case=="N0"].pivot_table(index=["model","process"],columns="score",
+      values="rate")[["S_gls_pert","S_gls_pool","S_gls_ema","S_gls_hybrid","S_gls_emp"]]
+      .round(3).to_string())
 
 block("8. Calibration of N0: z mean / var by horizon")
 for m in MODELS:

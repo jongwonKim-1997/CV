@@ -13,6 +13,7 @@
   "device": "cpu",
   "H": 32,
   "shrink": 0.05,
+  "hybrid_alpha": 0.5,
   "quantile_levels": [
     0.01,
     0.05,

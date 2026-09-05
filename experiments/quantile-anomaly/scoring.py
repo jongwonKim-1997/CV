@@ -127,39 +127,82 @@ def _chol_solve(R: np.ndarray, B: np.ndarray, max_tries: int = 6):
 
 # ------------------------------------------------------------------ scores
 
-def all_scores(z: np.ndarray, q: np.ndarray, x: np.ndarray,
-               R_pert: np.ndarray, R_emp: np.ndarray,
-               band_from_z: bool = False, R_pool: np.ndarray | None = None) -> dict:
-    """z:(n,H)  q:(n,H,Q)  x:(n,H)  R_pert:(n,H,H) or (H,H)  R_emp:(H,H).
+def causal_ema_psi(psi: np.ndarray, lam: float = 0.05) -> np.ndarray:
+    """EMA of psi along the window axis, using only the current and past windows.
 
-    ``band_from_z`` computes S_band as |z| > Phi^-1(0.9) instead of comparing x
-    against the raw q10/q90; needed when z has been recalibrated, so the band
-    moves with the correction.
+    Pooling psi over a whole (model, process, seed) block needs the process
+    label and peeks at future windows, so it cannot be used in deployment.
+    Smoothing along the time axis of one stream can: at window i it has seen
+    windows 0..i only.  lam = 0.05 is a half-life of about 13 windows.
+    """
+    out = np.empty_like(psi)
+    acc = psi[0].copy()
+    for i in range(psi.shape[0]):
+        acc = acc if i == 0 else (1.0 - lam) * acc + lam * psi[i]
+        out[i] = acc
+    return out
+
+
+def s_max_raw(q: np.ndarray, x: np.ndarray) -> np.ndarray:
+    """max_h |x_h - q50_h| / sigma_h, with no PIT and therefore no clipping.
+
+    S_max is capped at Phi^-1(0.995) = 2.576 by the 21-point quantile grid, so
+    a large spike saturates and cannot be told from a moderate one.  This
+    baseline reads the deviation directly off the model's own IQR scale.
+    """
+    qs = np.sort(q, axis=-1)
+    i50 = int(np.argmin(np.abs(QUANTILE_LEVELS - 0.50)))
+    sd = np.maximum(model_sigma(q), 1e-9)
+    return np.max(np.abs(x - qs[..., i50]) / sd, axis=1)
+
+
+def _gls(R: np.ndarray, z: np.ndarray, d: np.ndarray):
+    """Directed GLS level test along direction d.
+
+    T = |d' R^-1 z| / sqrt(d' R^-1 d).  Returns (T, d'R^-1 d, z'R^-1 z).
+    The direction must match the SHAPE of the anomaly being looked for:
+    d = 1 tests a constant deviation in z, d = 1/sigma_h a constant deviation
+    in x.  They agree only when sigma_h is flat across the horizon.
+    """
+    n, H_ = z.shape
+    if np.ndim(R) == 2:
+        R = np.broadcast_to(R, (n, H_, H_))
+    rhs = np.stack([d, z], axis=-1)
+    sol, _ = _chol_solve(np.ascontiguousarray(R), rhs)
+    Rinv_d, Rinv_z = sol[..., 0], sol[..., 1]
+    quad = np.einsum("nh,nh->n", d, Rinv_d)
+    num = np.einsum("nh,nh->n", d, Rinv_z)
+    maha = np.einsum("nh,nh->n", z, Rinv_z)
+    return np.abs(num) / np.sqrt(np.clip(quad, 1e-12, None)), quad, maha
+
+
+def all_scores(z: np.ndarray, q: np.ndarray, x: np.ndarray, Rs: dict,
+               band_from_z: bool = False) -> dict:
+    """z:(n,H)  q:(n,H,Q)  x:(n,H).
+
+    ``Rs`` maps a name to a correlation matrix, (n,H,H) or (H,H).  "pert" must
+    be present; "pool", "emp", "ema" and "hybrid" are scored when supplied.
     """
     n = z.shape[0]
-    ones = np.ones((n, H, 1))
-    zb = z[:, :, None]
+    ones = np.ones((n, H))
 
-    def gls(R):
-        Rb = np.broadcast_to(np.atleast_3d(R).reshape(-1, H, H), (n, H, H)) \
-            if np.ndim(R) == 2 else R
-        rhs = np.concatenate([ones, zb], axis=-1)          # (n, H, 2)
-        sol, _ = _chol_solve(np.ascontiguousarray(Rb), rhs)
-        Rinv1, Rinvz = sol[..., 0], sol[..., 1]
-        n_eff = np.einsum("nh,nh->n", np.ones((n, H)), Rinv1)
-        num = np.einsum("nh,nh->n", np.ones((n, H)), Rinvz)
-        maha = np.einsum("nh,nh->n", z, Rinvz)
-        return np.abs(num) / np.sqrt(np.clip(n_eff, 1e-9, None)), n_eff, maha
+    out = {}
+    for name, R in Rs.items():
+        t, quad, maha = _gls(R, z, ones)
+        out[f"S_gls_{name}"] = t
+        out[f"n_eff_{name}"] = quad
+        if name == "pert":
+            out["S_maha"] = maha
 
-    s_gls_pert, n_eff_pert, maha = gls(R_pert)
-    s_gls_emp, n_eff_emp, _ = gls(R_emp)
-    # Pooled variant: one R built from the psi averaged over the windows of
-    # this (model, process, seed).  1' R^-1 1 is very sensitive to a handful
-    # of small negative off-diagonals, so a per-window psi estimated on a
-    # noisy learned model makes n_eff explode; pooling first removes that.
-    if R_pool is None:
-        R_pool = R_pert
-    s_gls_pool, n_eff_pool, _ = gls(R_pool)
+    # Direction matched to a constant deviation in X space: d_h = 1/sigma_h.
+    # Scaling by sigma_1 makes n_eff_b comparable to the d = 1 version -- for
+    # an x-space offset of c the statistic is (c/sigma_1)*sqrt(n_eff_b), the
+    # same form as (0.7)*sqrt(n_eff) for the z-space case.
+    sd_h = np.maximum(model_sigma(q), 1e-9)
+    b = sd_h[:, [0]] / sd_h
+    t_b, quad_b, _ = _gls(Rs["pert"], z, b)
+    out["S_gls_b"] = t_b
+    out["n_eff_b"] = quad_b
 
     if band_from_z:
         outside = np.abs(z) > norm.ppf(0.90)
@@ -169,16 +212,12 @@ def all_scores(z: np.ndarray, q: np.ndarray, x: np.ndarray,
         i90 = int(np.argmin(np.abs(QUANTILE_LEVELS - 0.90)))
         outside = (x < qs[..., i10]) | (x > qs[..., i90])
 
-    return {
+    out.update({
         "S_max": np.max(np.abs(z), axis=1),
+        "S_max_raw": s_max_raw(q, x),
         "S_band": outside.mean(axis=1),
         "S_mean": np.abs(np.sqrt(H) * z.mean(axis=1)),
-        "S_gls_pert": s_gls_pert,
-        "S_gls_pool": s_gls_pool,
-        "S_gls_emp": s_gls_emp,
         "S_chi2": np.abs((z**2).sum(axis=1) - H) / np.sqrt(2 * H),
-        "S_maha": maha,
-        "n_eff": n_eff_pert,
-        "n_eff_pool": n_eff_pool,
-        "n_eff_emp": n_eff_emp,
-    }
+    })
+    out["n_eff"] = out["n_eff_pert"]
+    return out

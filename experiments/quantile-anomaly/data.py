@@ -20,7 +20,7 @@ SEAS_AMP = 2.0
 BURN_IN = 512
 
 PROCESSES = ("WN", "RW", "AR1", "SEAS")
-CASES = ("N0", "A0", "A1", "A2", "A3", "A4")
+CASES = ("N0", "A0", "A1", "A1p", "A2", "A3", "A4")
 
 QUANTILE_LEVELS = np.array(
     [0.01, 0.05]
@@ -132,8 +132,15 @@ def inject(case: str, future: np.ndarray, mu: np.ndarray, sd: np.ndarray,
         return future.copy()
     if case == "A0":                       # median path: variance deficit only
         return mu.copy()
-    if case == "A1":                       # constant 0.7-sigma offset path
+    if case == "A1":                       # constant offset in Z space
+        # z_h = 0.7 for every h: the deviation grows with sigma_h.
         return mu + 0.7 * sd
+    if case == "A1p":                      # constant offset in X space
+        # x_h = q50_h + 0.7*sigma_1: a fixed displacement in the units of the
+        # series.  In z space this is 0.7*sigma_1/sigma_h, which DECAYS, so it
+        # is a different direction from A1 whenever sigma_h is not flat.  The
+        # two coincide only for WN.
+        return mu + 0.7 * sd[:, [0]]
     if case == "A2":                       # level shift, noise preserved
         return future + 0.7 * sd[:, [0]]
     if case == "A3":                       # single spike

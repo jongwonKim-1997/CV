@@ -15,8 +15,9 @@ from data import H, PROCESSES, CASES
 HERE = os.path.dirname(os.path.abspath(__file__))
 RES, FIG = os.path.join(HERE, "results"), os.path.join(HERE, "figures")
 
-SCORES = ["S_max", "S_band", "S_mean", "S_gls_pert", "S_gls_pool",
-          "S_gls_emp", "S_chi2", "S_maha"]
+SCORES = ["S_max", "S_max_raw", "S_band", "S_mean",
+          "S_gls_pert", "S_gls_pool", "S_gls_ema", "S_gls_hybrid",
+          "S_gls_emp", "S_gls_b", "S_chi2", "S_maha"]
 # validated categorical slots 1-3 (all-pairs, light mode)
 C1, C2, C3 = "#2a78d6", "#eb6834", "#1baf7a"
 INK, INK2, GRID = "#0b0b0b", "#52514e", "#d9d8d4"
@@ -35,7 +36,8 @@ plt.rcParams.update({
 NOMINAL = 1.959964          # two-sided 5% critical value of N(0,1)
 # Scores that are z-scale level tests, so 1.96 is what "independent horizons"
 # would tell you to use as a threshold without ever looking at normal data.
-LEVEL_SCORES = ["S_mean", "S_gls_pert", "S_gls_pool", "S_gls_emp"]
+LEVEL_SCORES = ["S_mean", "S_gls_pert", "S_gls_pool", "S_gls_ema",
+                "S_gls_hybrid", "S_gls_emp", "S_gls_b"]
 
 
 def nominal_rates(df: pd.DataFrame) -> pd.DataFrame:
@@ -175,6 +177,7 @@ def fig_scores(df, models_):
 def fig_neff(diag, models_):
     d = (diag.groupby(["process", "model"])
              .agg(pert=("n_eff_pert", "mean"), pool=("n_eff_pool", "mean"),
+                  ema=("n_eff_ema", "mean"), hybrid=("n_eff_hybrid", "mean"),
                   emp=("n_eff_emp", "mean"))
              .reset_index())
     th = {}
@@ -190,7 +193,7 @@ def fig_neff(diag, models_):
         ax = axes[0][k]
         sub = d[d.model == model].set_index("process").reindex(PROCESSES)
         series = [("theory", [th[p] for p in PROCESSES], C3),
-                  ("R_pert (pooled)", sub["pool"].to_numpy(), C1),
+                  ("R_pert (causal EMA)", sub["ema"].to_numpy(), C1),
                   ("R_emp", sub["emp"].to_numpy(), C2)]
         for i, (lab, v, col) in enumerate(series):
             ax.bar(x + (i - 1) * w, v, w * 0.9, color=col, label=lab)

@@ -12,6 +12,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 RES = os.path.join(HERE, "results")
 CACHE = os.path.join(HERE, "cache")
 DIAG_H = (1, 8, 16, 32)
+HYBRID_ALPHA = 0.5      # weight on R_emp in the hybrid estimator
 
 
 def stable_seed(*parts) -> int:
@@ -95,7 +96,11 @@ def main():
                 q, psi, _ = forecast(model, proc, W["ctx"], W["t0"], tag,
                                      not args.no_cache)
                 R_pert = scoring.r_from_psi(psi)
+                # pooled: the whole block's psi averaged.  Diagnostic only --
+                # it needs the process label and peeks at future windows.
                 R_pool = scoring.r_from_psi(psi.mean(0, keepdims=True))[0]
+                # causal EMA along the window axis: deployable on one stream.
+                R_ema = scoring.r_from_psi(scoring.causal_ema_psi(psi))
 
                 # ---- empirical R from a disjoint set of normal windows
                 qe = model.predict(proc, W["ectx"], W["et0"])
@@ -109,10 +114,17 @@ def main():
                 cal_m, cal_s = ze.mean(0), np.maximum(ze.std(0), 1e-6)
                 ze_cal = (ze - cal_m) / cal_s
                 R_emp_cal = scoring.r_empirical(ze_cal)
-                variants = [(model.name, False, None, R_emp)]
+                # hybrid: shrink the noisy per-window R_pert toward the
+                # empirical R of this series.  Both are correlation matrices,
+                # so the convex combination keeps a unit diagonal.  R_emp needs
+                # only normal history, so this is deployable too.
+                def _mix(Re):
+                    return (1.0 - HYBRID_ALPHA) * R_pert + HYBRID_ALPHA * Re
+
+                variants = [(model.name, False, None, R_emp, _mix(R_emp))]
                 if not getattr(model, "analytic_psi", False):
                     variants.append((model.name + "_CAL", True,
-                                     (cal_m, cal_s), R_emp_cal))
+                                     (cal_m, cal_s), R_emp_cal, _mix(R_emp_cal)))
 
                 psi_store[(model.name, proc, seed)] = psi.mean(0)
                 Rp_mean = R_pert.mean(0)
@@ -123,19 +135,23 @@ def main():
                     x = data.inject(case, W["fut"], W["mu"], W["sd"], crng,
                                     future_hivar=W["fut_hi"])
                     z_raw = scoring.to_z(q, x)
-                    for mname, is_cal, cal, Re in variants:
+                    for mname, is_cal, cal, Re, Rhyb in variants:
                         z = (z_raw - cal[0]) / cal[1] if is_cal else z_raw
-                        sc = scoring.all_scores(z, q, x, R_pert, Re,
-                                                band_from_z=is_cal,
-                                                R_pool=R_pool)
+                        sc = scoring.all_scores(
+                            z, q, x,
+                            {"pert": R_pert, "pool": R_pool, "ema": R_ema,
+                             "emp": Re, "hybrid": Rhyb},
+                            band_from_z=is_cal)
                         for i in range(x.shape[0]):
                             rows.append(dict(
                                 process=proc, model=mname, case=case,
                                 seed=seed, window_id=i,
                                 **{k: float(v[i]) for k, v in sc.items()}))
                     z = z_raw
-                    sc = scoring.all_scores(z_raw, q, x, R_pert, R_emp,
-                                            R_pool=R_pool)
+                    sc = scoring.all_scores(
+                        z_raw, q, x,
+                        {"pert": R_pert, "pool": R_pool, "ema": R_ema,
+                         "emp": R_emp, "hybrid": _mix(R_emp)})
                     if case == "N0":
                         pit_store[(model.name, proc, seed)] = \
                             scoring.pit(q, x)[:, [h - 1 for h in DIAG_H]]
@@ -150,6 +166,9 @@ def main():
                                 n_eff_pert=float(sc["n_eff"].mean()),
                                 n_eff_pert_med=float(np.median(sc["n_eff"])),
                                 n_eff_pool=float(sc["n_eff_pool"].mean()),
+                                n_eff_ema=float(sc["n_eff_ema"].mean()),
+                                n_eff_hybrid=float(sc["n_eff_hybrid"].mean()),
+                                n_eff_b=float(sc["n_eff_b"].mean()),
                                 n_eff_emp=float(sc["n_eff_emp"].mean()),
                                 R_frobenius=fro))
                 print(f"  {model.name:8s} {proc:5s} seed={seed}  "
@@ -168,7 +187,7 @@ def main():
     with open(os.path.join(RES, "provenance.json"), "w") as f:
         json.dump(dict(models=prov, n=args.n, n_emp=args.n_emp,
                        seeds=args.seeds, device=device, H=H,
-                       shrink=scoring.SHRINK,
+                       shrink=scoring.SHRINK, hybrid_alpha=HYBRID_ALPHA,
                        quantile_levels=QUANTILE_LEVELS.tolist()), f, indent=2)
     print(f"\nwrote {len(rows)} score rows -> results/scores.csv")
 
