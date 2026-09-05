@@ -56,6 +56,10 @@ def main():
     ap.add_argument("--steps", type=int, default=4000, help="MLPQR train steps")
     ap.add_argument("--pool", type=int, default=40000, help="MLPQR train windows")
     ap.add_argument("--no-cache", action="store_true")
+    ap.add_argument("--chronos-path", default=None,
+                    help="local Chronos-2 checkpoint directory (the one with "
+                         "config.json). Use when huggingface.co is unreachable; "
+                         "pair it with HF_HUB_OFFLINE=1.")
     args = ap.parse_args()
     os.makedirs(RES, exist_ok=True); os.makedirs(CACHE, exist_ok=True)
 
@@ -67,7 +71,7 @@ def main():
     prov = {"ORACLE": "analytic"}
 
     print("resolving a pretrained forecaster ...")
-    ch, ch_name = models.try_load_chronos(device)
+    ch, ch_name = models.try_load_chronos(device, args.chronos_path)
     if ch is not None:
         zoo.append(ch); prov[ch_name] = "pretrained (huggingface)"
     else:

@@ -34,23 +34,37 @@ class OracleModel:
 
 # ------------------------------------------------------- Chronos wrappers
 
-def try_load_chronos(device: str = "cpu"):
+def try_load_chronos(device: str = "cpu", path: str | None = None):
     """Return (model, name) for Chronos-2, else chronos-bolt-small, else None.
 
-    The exact pipeline class and predict signature differ between the two, so
+    ``path`` is a local checkpoint directory (one holding config.json).  Pass it
+    when huggingface.co is unreachable but the weights were fetched elsewhere
+    and copied in; from_pretrained takes a directory just as it takes a repo id.
+    Setting HF_HUB_OFFLINE=1 alongside it stops the hub being contacted at all.
+
+    The pipeline class and predict signature differ between the two models, so
     each branch is written against its own package README.
     """
+    c2 = path or os.environ.get("CHRONOS2_PATH") or "amazon/chronos-2"
+    bolt = os.environ.get("CHRONOS_BOLT_PATH") or "amazon/chronos-bolt-small"
+    local = os.path.isdir(c2)
+    if local:
+        print(f"  loading Chronos-2 from a local directory: {c2}")
+
     try:
         from chronos import Chronos2Pipeline           # chronos-forecasting >= 2
-        p = Chronos2Pipeline.from_pretrained("amazon/chronos-2", device_map=device)
+        p = Chronos2Pipeline.from_pretrained(c2, device_map=device)
         return _Chronos2(p), "CHRONOS2"
     except Exception as e:                             # noqa: BLE001
         print(f"  chronos-2 unavailable: {type(e).__name__}: {str(e)[:160]}")
+        if local:
+            print(f"    (the path exists; contents: "
+                  f"{sorted(os.listdir(c2))[:8]})")
     try:
         import torch
         from chronos import BaseChronosPipeline
         p = BaseChronosPipeline.from_pretrained(
-            "amazon/chronos-bolt-small", device_map=device, torch_dtype=torch.float32)
+            bolt, device_map=device, torch_dtype=torch.float32)
         return _ChronosBolt(p), "CHRONOS_BOLT"
     except Exception as e:                             # noqa: BLE001
         print(f"  chronos-bolt unavailable: {type(e).__name__}: {str(e)[:160]}")
