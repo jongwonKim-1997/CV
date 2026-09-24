@@ -205,9 +205,9 @@ content:
         sub_title: Transactions on Machine Learning Research (TMLR), 2026
         caption: "Yoon, S., <b>Kim, J.</b>, Ha, J. and Ko, Y. M.*"
       - layout: top-right
-        title:  GAPS: Gradient-Aware Adaptation-Gap Scoring for Time-Series Anomaly Detection with Foundation Models
+        title:  "GAPS: Gradient-Aware Adaptation-Gap Scoring for Time-Series Anomaly Detection with Foundation Models"
         sub_title: Neural Information Processing Systems (NeurIPS), 2026
-        caption: "<b>Kim, J.</b>, Song,b. and Ko, Y. M.*"
+        caption: "<b>Kim, J.</b>, Song, B. and Ko, Y. M.*"
   - title: Awards
     layout: list
     content:
