@@ -68,7 +68,7 @@ content:
         quote: >
            Probablistic modeling for part of manufacturing system.
         description: | # this will include new lines to allow paragraphs
-          Project manager, probablistic model 
+          Project Manager (Graduate Student), Probablistic model 
           
       - layout: right
         title: KETI 
@@ -79,7 +79,7 @@ content:
         quote: >
            Fish probablistic modeling
         description: | # this will include new lines to allow paragraphs
-          Project manager, association problem, survival analysis
+          Project Manager (Graduate Student), Association problem, Survival analysis
           
          
       - layout: right
@@ -89,7 +89,7 @@ content:
         quote: >
            Regression modeling
         description: | # this will include new lines to allow paragraphs
-          Project manager, regression model
+          Project Manager (Graduate Student), Regression model
       
       - layout: right
         title: SK Hynix 
@@ -99,7 +99,7 @@ content:
         quote: >
            Implemetning anomaly detection model based on timeseries sensor data.
         description: | # this will include new lines to allow paragraphs
-          Project manager, timeseries anomaly detection          
+          Project Manager (Graduate Student), Timeseries anomaly detection          
 
       - layout: right
         title: Samsung research
@@ -108,7 +108,7 @@ content:
         quote: >
            Modeling graph neural network
         description: | # this will include new lines to allow paragraphs
-          Project member, Graph modeling
+          Project member (Graduate Student), Graph modeling
           
       - layout: right
         title: Ministry of Trade, Industry and Resources 
@@ -117,7 +117,7 @@ content:
         quote: >
            Development of Core Technologies for Manufacturing Foundation Models.
         description: | # this will include new lines to allow paragraphs
-          Project Operational Manager, Timeseries foundation model 
+          Consortium Project Manager, Timeseries foundation model 
 
       - layout: right
         title: Ministry of Trade, Industry and Resources 
@@ -126,7 +126,7 @@ content:
         quote: >
            Development of Core Technologies for an AI Foundation Model for Property Prediction of Materials
         description: | # this will include new lines to allow paragraphs
-         Project Operational Manager, Property Prediction, Foundation model
+         Consortium Project Manager, Property prediction, Foundation model
 
          
       #- layout: left
