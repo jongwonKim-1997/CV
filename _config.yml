@@ -117,7 +117,16 @@ content:
         quote: >
            Development of Core Technologies for Manufacturing Foundation Models.
         description: | # this will include new lines to allow paragraphs
-          Project manager, timeseries foundation model 
+          Project Operational Manager, Timeseries foundation model 
+
+      - layout: right
+        title: Ministry of Trade, Industry and Resources 
+        caption: 
+          2026.07 - 2028.12
+        quote: >
+           Development of Core Technologies for an AI Foundation Model for Property Prediction of Materials
+        description: | # this will include new lines to allow paragraphs
+         Project Operational Manager, Property Prediction, Foundation model
 
          
       #- layout: left
