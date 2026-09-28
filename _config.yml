@@ -62,11 +62,11 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: right
-        title: Samsung electronics 
+        title: Samsung Electronics 
         caption: 
           2021.06 - 2022.01
         quote: >
-           Probablistic modeling for part of manufacturing system.
+           Probabilistic modeling for part of manufacturing system
         description: | # this will include new lines to allow paragraphs
           Project Manager (Graduate Student), Probablistic model 
           
@@ -92,17 +92,17 @@ content:
           Project Manager (Graduate Student), Regression model
       
       - layout: right
-        title: SK Hynix 
+        title: SK hynix 
         caption: 
           2023.03 - 2023.10
           2024.03 - 2024.10
         quote: >
-           Implemetning anomaly detection model based on timeseries sensor data.
+           Implementing anomaly detection model based on timeseries sensor data
         description: | # this will include new lines to allow paragraphs
           Project Manager (Graduate Student), Timeseries anomaly detection          
 
       - layout: right
-        title: Samsung research
+        title: Samsung Research
         caption: 
           2024.05 - 2025.05
         quote: >
@@ -115,7 +115,7 @@ content:
         caption: 
           2025.08 - 2028.02
         quote: >
-           Development of Core Technologies for Manufacturing Foundation Models.
+           Development of Core Technologies for Manufacturing Foundation Models
         description: | # this will include new lines to allow paragraphs
           Consortium Project Manager, Timeseries foundation model 
 
