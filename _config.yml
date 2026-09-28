@@ -63,43 +63,48 @@ content:
     content:
       - layout: right
         title: Ministry of Trade, Industry and Resources 
+        sub_title: Consortium Project Manager
         caption: 
           2026.07 - 2028.12
         quote: >
            Development of Core Technologies for an AI Foundation Model for Property Prediction of Materials
         description: | # this will include new lines to allow paragraphs
-         Consortium Project Manager, Property prediction, Foundation model
+          **Keywords:** Property prediction, Foundation model
 
       - layout: right
         title: Ministry of Trade, Industry and Resources 
+        sub_title: Consortium Project Manager
         caption: 
           2025.08 - 2028.02
         quote: >
            Development of Core Technologies for Manufacturing Foundation Models
         description: | # this will include new lines to allow paragraphs
-          Consortium Project Manager, Time-series foundation model 
+          **Keywords:** Time-series foundation model
 
       - layout: right
         title: Samsung Research
+        sub_title: Project Member<br>(Graduate Student)
         caption: 
           2024.05 - 2025.05
         quote: >
            Graph neural network modeling
         description: | # this will include new lines to allow paragraphs
-          Project Member (Graduate Student), Graph modeling
+          **Keywords:** Graph modeling
 
       - layout: right
         title: SK hynix 
+        sub_title: Project Manager<br>(Graduate Student)
         caption: 
           2024.03 - 2024.10<br>
           2023.03 - 2023.10
         quote: >
            Anomaly detection model for time-series sensor data
         description: | # this will include new lines to allow paragraphs
-          Project Manager (Graduate Student), Time-series anomaly detection          
+          **Keywords:** Time-series anomaly detection
 
       - layout: right
         title: KETI 
+        sub_title: Project Manager<br>(Graduate Student)
         caption: 
           2023.09 - 2023.11<br>
           2022.07 - 2022.11<br>
@@ -107,25 +112,27 @@ content:
         quote: >
            Probabilistic modeling of fish growth and survival
         description: | # this will include new lines to allow paragraphs
-          Project Manager (Graduate Student), Association problem, Survival analysis
+          **Keywords:** Association problem, Survival analysis
 
       - layout: right
         title: POSCO 
+        sub_title: Project Manager<br>(Graduate Student)
         caption: 
           2023.03 - 2023.11
         quote: >
            Regression modeling
         description: | # this will include new lines to allow paragraphs
-          Project Manager (Graduate Student), Regression model
+          **Keywords:** Regression model
 
       - layout: right
         title: Samsung Electronics 
+        sub_title: Project Manager<br>(Graduate Student)
         caption: 
           2021.06 - 2022.01
         quote: >
            Probabilistic modeling for part of a manufacturing system
         description: | # this will include new lines to allow paragraphs
-          Project Manager (Graduate Student), Probabilistic model 
+          **Keywords:** Probabilistic model
 
       #- layout: left
       #  border: weak  # Value of `weak` will display a weak border below this item. # Any 
@@ -192,28 +199,28 @@ content:
     layout: list
     content:
       - layout: top-right
-        title:  "GAPS: Gradient-Aware Adaptation-Gap Scoring for Time-Series Anomaly Detection with Foundation Models"
-        sub_title: Conference on Neural Information Processing Systems (NeurIPS), 2026
+        title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px'>NeurIPS 2026</span><br>GAPS: Gradient-Aware Adaptation-Gap Scoring for Time-Series Anomaly Detection with Foundation Models"
+        sub_title: Conference on Neural Information Processing Systems
         caption: "<b>Kim, J.</b>, Song, B. and Ko, Y. M.*"
       - layout: top-right
-        title:  Patch-based Memory Gate Model in Time Series Foundation Model
-        sub_title: Transactions on Machine Learning Research (TMLR), 2026
+        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>TMLR 2026</span><br>Patch-based Memory Gate Model in Time Series Foundation Model"
+        sub_title: Transactions on Machine Learning Research
         caption: "Yoon, S., <b>Kim, J.</b>, Ha, J. and Ko, Y. M.*"
       - layout: top-right
-        title:  Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process 
-        sub_title: IEEE Transactions on Semiconductor Manufacturing, 2026
+        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>IEEE TSM 2026</span><br>Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process"
+        sub_title: IEEE Transactions on Semiconductor Manufacturing
         caption: "<b>Kim, J.</b>, Baik, S. M., Yu, D., Kim, J. and Ko, Y. M.*"
       - layout: top-right
-        title:  Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models
-        sub_title: International Conference on Learning Representations (ICLR), 2026
+        title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px'>ICLR 2026</span><br>Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models"
+        sub_title: International Conference on Learning Representations
         caption: "<b>Kim, J.</b>, Ko, Y. M.*, Yoon, S., Kim, Y., Kim, S. I. and Tae, J."
       - layout: top-right
-        title: Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
-        sub_title:  Knowledge-Based Systems, 2025
+        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>KBS 2025</span><br>Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization"
+        sub_title: Knowledge-Based Systems
         caption: "<b>Kim, J.</b>, Lee, H. Y. and Ko, Y. M.*"
       - layout: top-right
-        title:  A probabilistic fish growth model for a smart aquaculture system
-        sub_title: KSII Transactions on Internet and Information Systems, 2024
+        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>KSII TIIS 2024</span><br>A probabilistic fish growth model for a smart aquaculture system"
+        sub_title: KSII Transactions on Internet and Information Systems
         caption: "<b>Kim, J.</b>, Park, E., Cho, S., Kwon, K. and Ko, Y. M.*"
   - title: Awards
     layout: list
