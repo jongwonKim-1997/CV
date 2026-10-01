@@ -128,44 +128,60 @@ content:
   - title: Conference Papers
     layout: list
     content:
-      - layout: top-right
-        title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>NeurIPS 2026</span><br>GAPS: Gradient-Aware Adaptation-Gap Scoring for Time-Series Anomaly Detection with Foundation Models"
+      - layout: right
+        border: weak
+        title: NeurIPS
         sub_title: Conference on Neural Information Processing Systems
-        caption: "<b>Kim, J.</b>, Song, B. and Ko, Y. M.*"
-      - layout: top-right
-        title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>ICLR 2026</span><br>Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models"
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-primary' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span></span><b>GAPS: Gradient-Aware Adaptation-Gap Scoring for Time-Series Anomaly Detection with Foundation Models</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b>, Song, B. and Ko, Y. M.*</div>
+      - layout: right
+        title: ICLR
         sub_title: International Conference on Learning Representations
-        caption: "<b>Kim, J.</b>, Ko, Y. M.*, Yoon, S., Kim, Y., Kim, S. I. and Tae, J."
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-primary' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span></span><b>Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b>, Ko, Y. M.*, Yoon, S., Kim, Y., Kim, S. I. and Tae, J.</div>
   - title: Journal Articles
     layout: list
     content:
-      - layout: top-right
-        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>TMLR 2026</span><br>Patch-based Memory Gate Model in Time Series Foundation Model"
+      - layout: right
+        border: weak
+        title: TMLR
         sub_title: Transactions on Machine Learning Research
-        caption: "Yoon, S., <b>Kim, J.</b>, Ha, J. and Ko, Y. M.*"
-      - layout: top-right
-        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>IEEE TSM 2026</span><br>Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process"
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span></span><b>Patch-based Memory Gate Model in Time Series Foundation Model</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">Yoon, S., <b>Kim, J.</b>, Ha, J. and Ko, Y. M.*</div>
+      - layout: right
+        border: weak
+        title: IEEE TSM
         sub_title: IEEE Transactions on Semiconductor Manufacturing
-        caption: "<b>Kim, J.</b>, Baik, S. M., Yu, D., Kim, J. and Ko, Y. M.*"
-      - layout: top-right
-        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>KBS 2025</span><br>Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization"
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span></span><b>Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b>, Baik, S. M., Yu, D., Kim, J. and Ko, Y. M.*</div>
+      - layout: right
+        border: weak
+        title: KBS
         sub_title: Knowledge-Based Systems
-        caption: "<b>Kim, J.</b>, Lee, H. Y. and Ko, Y. M.*"
-      - layout: top-right
-        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>KSII TIIS 2024</span><br>A probabilistic fish growth model for a smart aquaculture system"
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2025</span></span><b>Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b>, Lee, H. Y. and Ko, Y. M.*</div>
+      - layout: right
+        title: KSII TIIS
         sub_title: KSII Transactions on Internet and Information Systems
-        caption: "<b>Kim, J.</b>, Park, E., Cho, S., Kwon, K. and Ko, Y. M.*"
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2024</span></span><b>A probabilistic fish growth model for a smart aquaculture system</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b>, Park, E., Cho, S., Kwon, K. and Ko, Y. M.*</div>
   - title: Presentations
     layout: list
     content:
-      - layout: top-right
-        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>IISE 2026</span><br>A Theoretically Guaranteed Anomaly Score for Time-Series Anomaly Detection with Foundation Models"
+      - layout: right
+        title: IISE
         sub_title: "IISE Annual Conference & Expo"
-        caption: "<b>Kim, J.</b> and Ko, Y. M.*"
-      - layout: top-right
-        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>IISE 2025</span><br>Timeseries Foundation Model for Anomaly Detection in Manufacturing Sensor Data"
-        sub_title: "IISE Annual Conference & Expo"
-        caption: "<b>Kim, J.</b> and Ko, Y. M.*"
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-default' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span></span><b>A Theoretically Guaranteed Anomaly Score for Time-Series Anomaly Detection with Foundation Models</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b> and Ko, Y. M.*</div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-default' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2025</span></span><b>Timeseries Foundation Model for Anomaly Detection in Manufacturing Sensor Data</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b> and Ko, Y. M.*</div>
   - title: Experience
     layout: list
     content:
