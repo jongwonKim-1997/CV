@@ -49,6 +49,8 @@ additional_links:
 about_profile_image: images/jongwonkim.jpg
 about_content: | # this will include new lines to allow paragraphs
     Hi, I'm Jongwon Kim. I received my Ph.D. in Industrial and Management Engineering from POSTECH in August 2026 and am now a postdoctoral researcher at the POSTECH Future IT Innovation Laboratory. My research centers on time-series foundation models: adapting them to diverse downstream tasks such as forecasting and anomaly detection, and applying them to real-world problems in manufacturing. I also work on probabilistic modeling, including Gaussian processes and other Bayesian models, and its application to Bayesian optimization. Through collaborations with Samsung Electronics, SK hynix, POSCO, and KETI, I work at the intersection of machine learning and Quality, Statistics, and Reliability (QSR).
+
+     I am currently on the job market, seeking positions starting in September 2027. Please feel free to reach out by email (pioneer0517@postech.ac.kr).
 #  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
 
 #  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
