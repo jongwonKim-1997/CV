@@ -66,42 +66,40 @@ content:
         sub_title: Consortium Project Manager
         caption: 
           2026.07 - 2028.12
-        quote: >
-           Development of Core Technologies for an AI Foundation Model for Property Prediction of Materials
         description: | # this will include new lines to allow paragraphs
-          **Keywords:** Property prediction, Foundation model
+          **Development of Core Technologies for an AI Foundation Model for Property Prediction of Materials**
 
+          <span style="color:#777; font-size:1.4rem">Keywords: Property prediction, Foundation model</span>
       - layout: right
         title: Ministry of Trade, Industry and Resources 
         sub_title: Consortium Project Manager
         caption: 
           2025.08 - 2028.02
-        quote: >
-           Development of Core Technologies for Manufacturing Foundation Models
         description: | # this will include new lines to allow paragraphs
-          **Keywords:** Time-series foundation model
+          **Development of Core Technologies for Manufacturing Foundation Models**
 
+          <span style="color:#777; font-size:1.4rem">Keywords: Time-series foundation model</span>
       - layout: right
         title: Samsung Research
         sub_title: Project Member<br>(Graduate Student)
         caption: 
           2024.05 - 2025.05
-        quote: >
-           Graph neural network modeling
         description: | # this will include new lines to allow paragraphs
-          **Keywords:** Graph modeling
+          **Graph-Based Knowledge Augmentation and Inference for Personalization**
 
+          <span style="color:#777; font-size:1.4rem">Keywords: Graph modeling</span>
       - layout: right
         title: SK hynix 
         sub_title: Project Manager<br>(Graduate Student)
         caption: 
           2024.03 - 2024.10<br>
           2023.03 - 2023.10
-        quote: >
-           Anomaly detection model for time-series sensor data
         description: | # this will include new lines to allow paragraphs
-          **Keywords:** Time-series anomaly detection
+          **FDC Trace Abnormal Pattern Detection Algorithm**
 
+          **Glitch Filtering Algorithms for Multiple Sensor Trace Data with Cost Minimization**
+
+          <span style="color:#777; font-size:1.4rem">Keywords: Time-series anomaly detection</span>
       - layout: right
         title: KETI 
         sub_title: Project Manager<br>(Graduate Student)
@@ -109,31 +107,32 @@ content:
           2023.09 - 2023.11<br>
           2022.07 - 2022.11<br>
           2021.07 - 2021.11
-        quote: >
-           Probabilistic modeling of fish growth and survival
         description: | # this will include new lines to allow paragraphs
-          **Keywords:** Association problem, Survival analysis
+          **Growth Modeling of Cultured Fish Based on Feed Amount and IoT Data**
 
+          **Fish Growth Prediction Model for Fish Farm Aqua Twin Systems**
+
+          **Fish Growth Modeling for Fish Farm Aqua Twin Systems**
+
+          <span style="color:#777; font-size:1.4rem">Keywords: Association problem, Survival analysis</span>
       - layout: right
         title: POSCO 
         sub_title: Project Manager<br>(Graduate Student)
         caption: 
           2023.03 - 2023.11
-        quote: >
-           Regression modeling
         description: | # this will include new lines to allow paragraphs
-          **Keywords:** Regression model
+          **Regression modeling**
 
+          <span style="color:#777; font-size:1.4rem">Keywords: Regression model</span>
       - layout: right
         title: Samsung Electronics 
         sub_title: Project Manager<br>(Graduate Student)
         caption: 
-          2021.06 - 2022.01
-        quote: >
-           Probabilistic modeling for part of a manufacturing system
+          2021.02 - 2022.01
         description: | # this will include new lines to allow paragraphs
-          **Keywords:** Probabilistic model
+          **Semiconductor Testing Temperature Monitoring System**
 
+          <span style="color:#777; font-size:1.4rem">Keywords: Probabilistic model</span>
       #- layout: left
       #  border: weak  # Value of `weak` will display a weak border below this item. # Any 
       #                # other value (or no value) means no border will be displayed
