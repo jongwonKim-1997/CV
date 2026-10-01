@@ -195,13 +195,20 @@ content:
         caption: 2015.03 - 2020.02
         description: | # this will include new lines to allow paragraphs
           Double major
-  - title: Publications
+  - title: Conference Papers
     layout: list
     content:
       - layout: top-right
         title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px'>NeurIPS 2026</span><br>GAPS: Gradient-Aware Adaptation-Gap Scoring for Time-Series Anomaly Detection with Foundation Models"
         sub_title: Conference on Neural Information Processing Systems
         caption: "<b>Kim, J.</b>, Song, B. and Ko, Y. M.*"
+      - layout: top-right
+        title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px'>ICLR 2026</span><br>Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models"
+        sub_title: International Conference on Learning Representations
+        caption: "<b>Kim, J.</b>, Ko, Y. M.*, Yoon, S., Kim, Y., Kim, S. I. and Tae, J."
+  - title: Journal Articles
+    layout: list
+    content:
       - layout: top-right
         title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>TMLR 2026</span><br>Patch-based Memory Gate Model in Time Series Foundation Model"
         sub_title: Transactions on Machine Learning Research
@@ -211,10 +218,6 @@ content:
         sub_title: IEEE Transactions on Semiconductor Manufacturing
         caption: "<b>Kim, J.</b>, Baik, S. M., Yu, D., Kim, J. and Ko, Y. M.*"
       - layout: top-right
-        title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px'>ICLR 2026</span><br>Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models"
-        sub_title: International Conference on Learning Representations
-        caption: "<b>Kim, J.</b>, Ko, Y. M.*, Yoon, S., Kim, Y., Kim, S. I. and Tae, J."
-      - layout: top-right
         title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>KBS 2025</span><br>Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization"
         sub_title: Knowledge-Based Systems
         caption: "<b>Kim, J.</b>, Lee, H. Y. and Ko, Y. M.*"
@@ -222,6 +225,17 @@ content:
         title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>KSII TIIS 2024</span><br>A probabilistic fish growth model for a smart aquaculture system"
         sub_title: KSII Transactions on Internet and Information Systems
         caption: "<b>Kim, J.</b>, Park, E., Cho, S., Kwon, K. and Ko, Y. M.*"
+  - title: Presentations
+    layout: list
+    content:
+      - layout: top-right
+        title: "<span class='label label-info' style='display:inline-block;margin-bottom:6px'>IISE 2026</span><br>A Theoretically Guaranteed Anomaly Score for Time-Series Anomaly Detection with Foundation Models"
+        sub_title: "IISE Annual Conference & Expo"
+        caption: "<b>Kim, J.</b> and Ko, Y. M.*"
+      - layout: top-right
+        title: "<span class='label label-info' style='display:inline-block;margin-bottom:6px'>IISE 2025</span><br>Timeseries Foundation Model for Anomaly Detection in Manufacturing Sensor Data"
+        sub_title: "IISE Annual Conference & Expo"
+        caption: "<b>Kim, J.</b> and Ko, Y. M.*"
   - title: Awards
     layout: list
     content:
