@@ -48,11 +48,11 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/jongwonkim.jpg
 about_content: | # this will include new lines to allow paragraphs
-    Hi, I'm Jongwon Kim. I received my Ph.D. in Industrial and Management Engineering from POSTECH in August 2026 and am now a postdoctoral researcher at the POSTECH Future IT Innovation Laboratory.
+    Hi, I'm Jongwon Kim. I received my Ph.D. in Industrial and Management Engineering from POSTECH in August 2026 and am currently a postdoctoral researcher at the Future IT Innovation Laboratory at POSTECH.
 
-    My research centers on **AI for manufacturing**. In particular, I work on anomaly detection and analysis of manufacturing sensor data using time-series foundation models, and my most recent work focuses on building foundation models specialized for manufacturing. I also work on probabilistic modeling, including Gaussian processes and other Bayesian models, and its application to Bayesian optimization. Through collaborations with Samsung Electronics, SK hynix, POSCO, and KETI, I work at the intersection of machine learning and Quality, Statistics, and Reliability (QSR).
+    My research centers on **AI for manufacturing**. In particular, I develop methods for anomaly detection and analysis of manufacturing sensor data with **time-series foundation models**, and my most recent work focuses on building foundation models specialized for manufacturing. I am also interested in probabilistic modeling, including Gaussian processes and other Bayesian models, and its application to Bayesian optimization. Much of this work has been carried out in collaboration with Samsung Electronics, SK hynix, POSCO, and KETI, at the intersection of machine learning and Quality, Statistics, and Reliability (QSR).
 
-    I am currently on the job market, seeking positions starting in September 2027. Please feel free to reach out by email (pioneer0517@postech.ac.kr).
+    I am currently on the job market for positions starting in September 2027. Please feel free to reach out by email (pioneer0517@postech.ac.kr).
 #  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
 
 #  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
