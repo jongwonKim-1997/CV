@@ -58,206 +58,170 @@ about_content: | # this will include new lines to allow paragraphs
 #    - Images ![alt text](/images/landscape-trees.jpg "Trees")
 
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Projects
+    layout: list
     content:
       - layout: right
-        title: Ministry of Trade, Industry and Resources 
+        border: weak
+        title: Ministry of Trade, Industry and Resources
         sub_title: Consortium Project Manager
-        caption: 
-          2026.07 - 2028.12
-        description: | # this will include new lines to allow paragraphs
-          **Development of Core Technologies for an AI Foundation Model for Property Prediction of Materials**
-
-          <span style="color:#777; font-size:1.4rem">Keywords: Property prediction, Foundation model</span>
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.35em"><span style="flex:0 0 140px;color:#777;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap">2026.07 – 2028.12</span><b>Development of Core Technologies for an AI Foundation Model for Property Prediction of Materials</b></div>
+          <div style="margin-left:154px"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Property prediction</span><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Foundation model</span></div>
       - layout: right
-        title: Ministry of Trade, Industry and Resources 
+        border: weak
+        title: Ministry of Trade, Industry and Resources
         sub_title: Consortium Project Manager
-        caption: 
-          2025.08 - 2028.02
-        description: | # this will include new lines to allow paragraphs
-          **Development of Core Technologies for Manufacturing Foundation Models**
-
-          <span style="color:#777; font-size:1.4rem">Keywords: Time-series foundation model</span>
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.35em"><span style="flex:0 0 140px;color:#777;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap">2025.08 – 2028.02</span><b>Development of Core Technologies for Manufacturing Foundation Models</b></div>
+          <div style="margin-left:154px"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Time-series foundation model</span></div>
       - layout: right
+        border: weak
         title: Samsung Research
         sub_title: Project Member<br>(Graduate Student)
-        caption: 
-          2024.05 - 2025.05
-        description: | # this will include new lines to allow paragraphs
-          **Graph-Based Knowledge Augmentation and Inference for Personalization**
-
-          <span style="color:#777; font-size:1.4rem">Keywords: Graph modeling</span>
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.35em"><span style="flex:0 0 140px;color:#777;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap">2024.05 – 2025.05</span><b>Graph-Based Knowledge Augmentation and Inference for Personalization</b></div>
+          <div style="margin-left:154px"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Graph modeling</span></div>
       - layout: right
-        title: SK hynix 
+        border: weak
+        title: SK hynix
         sub_title: Project Manager<br>(Graduate Student)
-        caption: 
-          2024.03 - 2024.10<br>
-          2023.03 - 2023.10
-        description: | # this will include new lines to allow paragraphs
-          **FDC Trace Abnormal Pattern Detection Algorithm**
-
-          **Glitch Filtering Algorithms for Multiple Sensor Trace Data with Cost Minimization**
-
-          <span style="color:#777; font-size:1.4rem">Keywords: Time-series anomaly detection</span>
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.35em"><span style="flex:0 0 140px;color:#777;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap">2024.03 – 2024.10</span><b>FDC Trace Abnormal Pattern Detection Algorithm</b></div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.35em"><span style="flex:0 0 140px;color:#777;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap">2023.03 – 2023.10</span><b>Glitch Filtering Algorithms for Multiple Sensor Trace Data with Cost Minimization</b></div>
+          <div style="margin-left:154px"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Time-series anomaly detection</span></div>
       - layout: right
-        title: KETI 
+        border: weak
+        title: KETI
         sub_title: Project Manager<br>(Graduate Student)
-        caption: 
-          2023.09 - 2023.11<br>
-          2022.07 - 2022.11<br>
-          2021.07 - 2021.11
-        description: | # this will include new lines to allow paragraphs
-          **Growth Modeling of Cultured Fish Based on Feed Amount and IoT Data**
-
-          **Fish Growth Prediction Model for Fish Farm Aqua Twin Systems**
-
-          **Fish Growth Modeling for Fish Farm Aqua Twin Systems**
-
-          <span style="color:#777; font-size:1.4rem">Keywords: Association problem, Survival analysis</span>
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.35em"><span style="flex:0 0 140px;color:#777;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap">2023.09 – 2023.11</span><b>Growth Modeling of Cultured Fish Based on Feed Amount and IoT Data</b></div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.35em"><span style="flex:0 0 140px;color:#777;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap">2022.07 – 2022.11</span><b>Fish Growth Prediction Model for Fish Farm Aqua Twin Systems</b></div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.35em"><span style="flex:0 0 140px;color:#777;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap">2021.07 – 2021.11</span><b>Fish Growth Modeling for Fish Farm Aqua Twin Systems</b></div>
+          <div style="margin-left:154px"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Association problem</span><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Survival analysis</span></div>
       - layout: right
-        title: POSCO 
+        border: weak
+        title: POSCO
         sub_title: Project Manager<br>(Graduate Student)
-        caption: 
-          2023.03 - 2023.11
-        description: | # this will include new lines to allow paragraphs
-          **Regression modeling**
-
-          <span style="color:#777; font-size:1.4rem">Keywords: Regression model</span>
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.35em"><span style="flex:0 0 140px;color:#777;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap">2023.03 – 2023.11</span><b>Regression modeling</b></div>
+          <div style="margin-left:154px"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Regression model</span></div>
       - layout: right
-        title: Samsung Electronics 
+        title: Samsung Electronics
         sub_title: Project Manager<br>(Graduate Student)
-        caption: 
-          2021.02 - 2022.01
-        description: | # this will include new lines to allow paragraphs
-          **Semiconductor Testing Temperature Monitoring System**
-
-          <span style="color:#777; font-size:1.4rem">Keywords: Probabilistic model</span>
-      #- layout: left
-      #  border: weak  # Value of `weak` will display a weak border below this item. # Any 
-      #                # other value (or no value) means no border will be displayed
-      #  title: Project name
-      #  link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-      #  link_text: Link Text
-      #  additional_links:
-      #    - title:  Github page for project (eg. sproogen/modern-resume-theme)
-      #      icon: fab fa-github
-      #      url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-      #    - title:  Github page for project (eg. sproogen/modern-resume-theme)
-      #      icon: fab fa-github
-      #      url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-      #  quote: >
-      #    Short overview of the project (optional)
-      #  description: | # this will include new lines to allow paragraphs
-      #    Description about the work on/with the project
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.35em"><span style="flex:0 0 140px;color:#777;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap">2021.02 – 2022.01</span><b>Semiconductor Testing Temperature Monitoring System</b></div>
+          <div style="margin-left:154px"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Probabilistic model</span></div>
   - title: Experience
     layout: list
     content:
       - layout: right
+        title: POSTECH
+        sub_title: Postdoctoral Researcher<br>Future IT Innovation Lab
+        caption: 2026.09 – Present
+        description: |
+          Time-series foundation models for forecasting and anomaly detection, and their application to manufacturing problems.
+      - layout: right
         title: SMARF
         sub_title: Internship
-        caption: 2019.06 - 2019.08
+        caption: 2019.06 – 2019.08
         quote: >
           Smart farming startup
-        description: | # this will include new lines to allow paragraphs
+        description: |
           Implemented an insect classification model on a small single-board computer and collected insect data in the field.
       - layout: right
         title: NAVER
         sub_title: Internship
-        caption: 2018.07 - 2018.08
+        caption: 2018.07 – 2018.08
         quote: >
           Korea's largest internet company
-        description: | # this will include new lines to allow paragraphs
+        description: |
           User feedback
   - title: Education
     layout: list
     content:
       - layout: top-right
-        title: POSTECH 
-        sub_title: Postdoctoral Researcher, Future IT Innovation Lab
-        caption: 2026.09 - Present
-      - layout: top-right
         title: POSTECH
         sub_title: Ph.D. in Industrial and Management Engineering
-        caption: 2022.02 - 2026.08
-        description: | # this will include new lines to allow paragraphs
-          Thesis: Toward Robust Anomaly Detection with Time-Series Foundation Models: Improving Anomaly Separability through Provable Mean Separation and Variance Reduction
+        caption: 2022.02 – 2026.08
+        description: |
+          <span style="color:#888">Thesis ·</span> Toward Robust Anomaly Detection with Time-Series Foundation Models: Improving Anomaly Separability through Provable Mean Separation and Variance Reduction
       - layout: top-right
         title: POSTECH
         sub_title: M.S. in Industrial and Management Engineering
-        caption: 2020.03 - 2022.02
-        description: | # this will include new lines to allow paragraphs
-          Thesis: Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
+        caption: 2020.03 – 2022.02
+        description: |
+          <span style="color:#888">Thesis ·</span> Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
       - layout: top-right
         title: POSTECH
         sub_title: B.A. in Industrial and Management Engineering and Mathematics
-        caption: 2015.03 - 2020.02
-        description: | # this will include new lines to allow paragraphs
+        caption: 2015.03 – 2020.02
+        description: |
           Double major
   - title: Conference Papers
     layout: list
     content:
       - layout: top-right
-        title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px'>NeurIPS 2026</span><br>GAPS: Gradient-Aware Adaptation-Gap Scoring for Time-Series Anomaly Detection with Foundation Models"
+        title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>NeurIPS 2026</span><br>GAPS: Gradient-Aware Adaptation-Gap Scoring for Time-Series Anomaly Detection with Foundation Models"
         sub_title: Conference on Neural Information Processing Systems
         caption: "<b>Kim, J.</b>, Song, B. and Ko, Y. M.*"
       - layout: top-right
-        title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px'>ICLR 2026</span><br>Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models"
+        title: "<span class='label label-primary' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>ICLR 2026</span><br>Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models"
         sub_title: International Conference on Learning Representations
         caption: "<b>Kim, J.</b>, Ko, Y. M.*, Yoon, S., Kim, Y., Kim, S. I. and Tae, J."
   - title: Journal Articles
     layout: list
     content:
       - layout: top-right
-        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>TMLR 2026</span><br>Patch-based Memory Gate Model in Time Series Foundation Model"
+        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>TMLR 2026</span><br>Patch-based Memory Gate Model in Time Series Foundation Model"
         sub_title: Transactions on Machine Learning Research
         caption: "Yoon, S., <b>Kim, J.</b>, Ha, J. and Ko, Y. M.*"
       - layout: top-right
-        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>IEEE TSM 2026</span><br>Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process"
+        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>IEEE TSM 2026</span><br>Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process"
         sub_title: IEEE Transactions on Semiconductor Manufacturing
         caption: "<b>Kim, J.</b>, Baik, S. M., Yu, D., Kim, J. and Ko, Y. M.*"
       - layout: top-right
-        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>KBS 2025</span><br>Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization"
+        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>KBS 2025</span><br>Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization"
         sub_title: Knowledge-Based Systems
         caption: "<b>Kim, J.</b>, Lee, H. Y. and Ko, Y. M.*"
       - layout: top-right
-        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px'>KSII TIIS 2024</span><br>A probabilistic fish growth model for a smart aquaculture system"
+        title: "<span class='label label-success' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>KSII TIIS 2024</span><br>A probabilistic fish growth model for a smart aquaculture system"
         sub_title: KSII Transactions on Internet and Information Systems
         caption: "<b>Kim, J.</b>, Park, E., Cho, S., Kwon, K. and Ko, Y. M.*"
   - title: Presentations
     layout: list
     content:
       - layout: top-right
-        title: "<span class='label label-info' style='display:inline-block;margin-bottom:6px'>IISE 2026</span><br>A Theoretically Guaranteed Anomaly Score for Time-Series Anomaly Detection with Foundation Models"
+        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>IISE 2026</span><br>A Theoretically Guaranteed Anomaly Score for Time-Series Anomaly Detection with Foundation Models"
         sub_title: "IISE Annual Conference & Expo"
         caption: "<b>Kim, J.</b> and Ko, Y. M.*"
       - layout: top-right
-        title: "<span class='label label-info' style='display:inline-block;margin-bottom:6px'>IISE 2025</span><br>Timeseries Foundation Model for Anomaly Detection in Manufacturing Sensor Data"
+        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>IISE 2025</span><br>Timeseries Foundation Model for Anomaly Detection in Manufacturing Sensor Data"
         sub_title: "IISE Annual Conference & Expo"
         caption: "<b>Kim, J.</b> and Ko, Y. M.*"
   - title: Awards
     layout: list
     content:
       - layout: top-right
-        title: 2026 PIURI Scholarship
-        sub_title: Awarded by POSTECH
+        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span><br>PIURI Scholarship"
+        sub_title: "Awarded by POSTECH"
       - layout: top-right
-        title: 2024 Postechian Fellowship
-        sub_title: Awarded KRW 6,000,000
+        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2024</span><br>Postechian Fellowship"
+        sub_title: "Awarded KRW 6,000,000"
       - layout: top-right
-        title: 2022 ICONI Outstanding Paper Award
-        sub_title: For the paper "A probabilistic fish growth model for a smart aquaculture system" 
+        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2022</span><br>ICONI Outstanding Paper Award"
+        sub_title: "For the paper \"A probabilistic fish growth model for a smart aquaculture system\""
       - layout: top-right
-        title: 2021 Korean Data and Information Science Society Spring Conference, Best Poster Award (1st Place)
-        sub_title:  Constrained clustering via black box optimization
+        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2021</span><br>Korean Data and Information Science Society Spring Conference, Best Poster Award (1st Place)"
+        sub_title: "Constrained clustering via black box optimization"
       - layout: top-right
-        title: 2020 POSTECH Open Innovation Big Data Challenge, 1st Place
-        sub_title:  Time-series prediction for solar power generation    
+        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2020</span><br>POSTECH Open Innovation Big Data Challenge, 1st Place"
+        sub_title: "Time-series prediction for solar power generation"
   - title: A Little More About Me
     layout: text
-    content: | # this will include new lines to allow paragraphs
+    content: |
       Book collector and a big fan of Nongshim RedForce, a Korean esports team.
-      
+
 # Footer
 footer_show_references: true
 # references_title: References on request (Override references text)
