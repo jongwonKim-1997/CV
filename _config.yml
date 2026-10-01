@@ -112,52 +112,19 @@ content:
         description: |
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2021.02 – 2022.01</span><b>Semiconductor Testing Temperature Monitoring System</b></div>
           <div style="margin-left:174px;margin-top:.2em"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Probabilistic model</span></div>
-  - title: Experience
-    layout: list
-    content:
-      - layout: right
-        title: POSTECH
-        sub_title: Postdoctoral Researcher<br>Future IT Innovation Lab
-        caption: 2026.09 – Present
-        description: |
-          Time-series foundation models for forecasting and anomaly detection, and their application to manufacturing problems.
-      - layout: right
-        title: SMARF
-        sub_title: Internship
-        caption: 2019.06 – 2019.08
-        quote: >
-          Smart farming startup
-        description: |
-          Implemented an insect classification model on a small single-board computer and collected insect data in the field.
-      - layout: right
-        title: NAVER
-        sub_title: Internship
-        caption: 2018.07 – 2018.08
-        quote: >
-          Korea's largest internet company
-        description: |
-          User feedback
   - title: Education
     layout: list
     content:
-      - layout: top-right
+      - layout: right
         title: POSTECH
-        sub_title: Ph.D. in Industrial and Management Engineering
-        caption: 2022.02 – 2026.08
+        sub_title: Pohang University of Science and Technology
         description: |
-          <span style="color:#888">Thesis ·</span> Toward Robust Anomaly Detection with Time-Series Foundation Models: Improving Anomaly Separability through Provable Mean Separation and Variance Reduction
-      - layout: top-right
-        title: POSTECH
-        sub_title: M.S. in Industrial and Management Engineering
-        caption: 2020.03 – 2022.02
-        description: |
-          <span style="color:#888">Thesis ·</span> Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization
-      - layout: top-right
-        title: POSTECH
-        sub_title: B.A. in Industrial and Management Engineering and Mathematics
-        caption: 2015.03 – 2020.02
-        description: |
-          Double major
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2022.02 – 2026.08</span><b>Ph.D. in Industrial and Management Engineering</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><span style="color:#888">Thesis ·</span> Toward Robust Anomaly Detection with Time-Series Foundation Models: Improving Anomaly Separability through Provable Mean Separation and Variance Reduction</div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2020.03 – 2022.02</span><b>M.S. in Industrial and Management Engineering</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><span style="color:#888">Thesis ·</span> Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization</div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2015.03 – 2020.02</span><b>B.A. in Industrial and Management Engineering and Mathematics</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">Double major</div>
   - title: Conference Papers
     layout: list
     content:
@@ -199,23 +166,46 @@ content:
         title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>IISE 2025</span><br>Timeseries Foundation Model for Anomaly Detection in Manufacturing Sensor Data"
         sub_title: "IISE Annual Conference & Expo"
         caption: "<b>Kim, J.</b> and Ko, Y. M.*"
+  - title: Experience
+    layout: list
+    content:
+      - layout: right
+        border: weak
+        title: POSTECH
+        sub_title: Future IT Innovation Lab
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2026.09 – Present</span><b>Postdoctoral Researcher</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">Time-series foundation models for forecasting and anomaly detection, and their application to manufacturing problems.</div>
+      - layout: right
+        border: weak
+        title: SMARF
+        sub_title: Smart farming startup
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2019.06 – 2019.08</span><b>Internship</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">Implemented an insect classification model on a small single-board computer and collected insect data in the field.</div>
+      - layout: right
+        title: NAVER
+        sub_title: Korea's largest internet company
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2018.07 – 2018.08</span><b>Internship</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">User feedback</div>
   - title: Awards
     layout: list
     content:
       - layout: top-right
-        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span><br>PIURI Scholarship"
+        title: 2026 PIURI Scholarship
         sub_title: "Awarded by POSTECH"
       - layout: top-right
-        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2024</span><br>Postechian Fellowship"
+        title: 2024 Postechian Fellowship
         sub_title: "Awarded KRW 6,000,000"
       - layout: top-right
-        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2022</span><br>ICONI Outstanding Paper Award"
+        title: 2022 ICONI Outstanding Paper Award
         sub_title: "For the paper \"A probabilistic fish growth model for a smart aquaculture system\""
       - layout: top-right
-        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2021</span><br>Korean Data and Information Science Society Spring Conference, Best Poster Award (1st Place)"
+        title: 2021 Korean Data and Information Science Society Spring Conference, Best Poster Award (1st Place)
         sub_title: "Constrained clustering via black box optimization"
       - layout: top-right
-        title: "<span class='label label-default' style='display:inline-block;margin-bottom:6px;padding:.4em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2020</span><br>POSTECH Open Innovation Big Data Challenge, 1st Place"
+        title: 2020 POSTECH Open Innovation Big Data Challenge, 1st Place
         sub_title: "Time-series prediction for solar power generation"
   - title: A Little More About Me
     layout: text
