@@ -102,20 +102,20 @@ content:
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2023.09 – 2023.11</span><b>Growth Modeling of Cultured Fish Based on Feed Amount and IoT Data</b></div>
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2022.07 – 2022.11</span><b>Fish Growth Prediction Model for Fish Farm Aqua Twin Systems</b></div>
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2021.07 – 2021.11</span><b>Fish Growth Modeling for Fish Farm Aqua Twin Systems</b></div>
-          <div style="margin-left:174px;margin-top:.2em"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Data association</span><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Survival analysis</span></div>
+          <div style="margin-left:174px;margin-top:.2em"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Forecasting model</span><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Data association</span><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Survival analysis</span></div>
       - layout: right
         border: weak
         title: POSCO
         sub_title: Project Manager<br>(Graduate Student)
         description: |
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2023.03 – 2023.11</span><b>Regression modeling</b></div>
-          <div style="margin-left:174px;margin-top:.2em"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Regression model</span></div>
+          <div style="margin-left:174px;margin-top:.2em"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Forecasting model</span></div><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Regression model</span></div>
       - layout: right
         title: Samsung Electronics
         sub_title: Project Manager<br>(Graduate Student)
         description: |
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2021.02 – 2022.01</span><b>Semiconductor Testing Temperature Monitoring System</b></div>
-          <div style="margin-left:174px;margin-top:.2em"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Probabilistic model</span></div>
+          <div style="margin-left:174px;margin-top:.2em"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Probabilistic model</span><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Spatio-temporal model</span></div>
   - title: Education
     layout: list
     content:
