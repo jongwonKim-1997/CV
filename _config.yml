@@ -48,7 +48,7 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/jongwonkim.jpg
 about_content: | # this will include new lines to allow paragraphs
-    Hi, I'm Jongwon Kim. I received my Ph.D. in Industrial and Management Engineering from POSTECH in August 2026 and am now a postdoctoral researcher at the POSTECH Future IT Innovation Lab. My research centers on time-series foundation models: adapting them to diverse downstream tasks such as forecasting and anomaly detection, and applying them to real-world problems in manufacturing. I also work on probabilistic modeling, including Gaussian processes and other Bayesian models, and its application to Bayesian optimization. Through collaborations with Samsung Electronics, SK hynix, POSCO, and KETI, I work at the intersection of machine learning and Quality, Statistics, and Reliability (QSR).
+    Hi, I'm Jongwon Kim. I received my Ph.D. in Industrial and Management Engineering from POSTECH in August 2026 and am now a postdoctoral researcher at the POSTECH Future IT Innovation Laboratory. My research centers on time-series foundation models: adapting them to diverse downstream tasks such as forecasting and anomaly detection, and applying them to real-world problems in manufacturing. I also work on probabilistic modeling, including Gaussian processes and other Bayesian models, and its application to Bayesian optimization. Through collaborations with Samsung Electronics, SK hynix, POSCO, and KETI, I work at the intersection of machine learning and Quality, Statistics, and Reliability (QSR).
 #  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
 
 #  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
@@ -98,7 +98,7 @@ content:
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2023.09 – 2023.11</span><b>Growth Modeling of Cultured Fish Based on Feed Amount and IoT Data</b></div>
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2022.07 – 2022.11</span><b>Fish Growth Prediction Model for Fish Farm Aqua Twin Systems</b></div>
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2021.07 – 2021.11</span><b>Fish Growth Modeling for Fish Farm Aqua Twin Systems</b></div>
-          <div style="margin-left:174px;margin-top:.2em"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Association problem</span><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Survival analysis</span></div>
+          <div style="margin-left:174px;margin-top:.2em"><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Data association</span><span class="label" style="display:inline-block;margin:2px 4px 0 0;padding:.35em .7em;background:#eef1f4;color:#55606b;font-weight:500;font-size:1.2rem">Survival analysis</span></div>
       - layout: right
         border: weak
         title: POSCO
@@ -116,14 +116,24 @@ content:
     layout: list
     content:
       - layout: right
+        border: weak
         title: POSTECH
         sub_title: Pohang University of Science and Technology
         description: |
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2022.02 – 2026.08</span><b>Ph.D. in Industrial and Management Engineering</b></div>
           <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><span style="color:#888">Thesis ·</span> Toward Robust Anomaly Detection with Time-Series Foundation Models: Improving Anomaly Separability through Provable Mean Separation and Variance Reduction</div>
+      - layout: right
+        border: weak
+        title: POSTECH
+        sub_title: Pohang University of Science and Technology
+        description: |
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2020.03 – 2022.02</span><b>M.S. in Industrial and Management Engineering</b></div>
-          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><span style="color:#888">Thesis ·</span> Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization</div>
-          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2015.03 – 2020.02</span><b>B.A. in Industrial and Management Engineering and Mathematics</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><span style="color:#888">Thesis ·</span> Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) Using Hyperparameter Optimization</div>
+      - layout: right
+        title: POSTECH
+        sub_title: Pohang University of Science and Technology
+        description: |
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2015.03 – 2020.02</span><b>B.S. in Industrial and Management Engineering and Mathematics</b></div>
           <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">Double major</div>
   - title: Conference Papers
     layout: list
@@ -149,46 +159,52 @@ content:
         title: TMLR
         sub_title: Transactions on Machine Learning Research
         description: |
-          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span></span><b>Patch-based Memory Gate Model in Time Series Foundation Model</b></div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span></span><b>Patch-Based Memory Gate Model in Time Series Foundation Model</b></div>
           <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">Yoon, S., <b>Kim, J.</b>, Ha, J. and Ko, Y. M.*</div>
       - layout: right
         border: weak
         title: IEEE TSM
         sub_title: IEEE Transactions on Semiconductor Manufacturing
         description: |
-          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span></span><b>Online surface temperature monitoring system for semiconductor automated test equipment using local Gaussian process</b></div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span></span><b>Online Surface Temperature Monitoring System for Semiconductor Automated Test Equipment Using Local Gaussian Process</b></div>
           <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b>, Baik, S. M., Yu, D., Kim, J. and Ko, Y. M.*</div>
       - layout: right
         border: weak
         title: KBS
         sub_title: Knowledge-Based Systems
         description: |
-          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2025</span></span><b>Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) using Hyperparameter Optimization</b></div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2025</span></span><b>Constrained Density-Based Spatial Clustering of Applications with Noise (DBSCAN) Using Hyperparameter Optimization</b></div>
           <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b>, Lee, H. Y. and Ko, Y. M.*</div>
       - layout: right
         title: KSII TIIS
         sub_title: KSII Transactions on Internet and Information Systems
         description: |
-          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2024</span></span><b>A probabilistic fish growth model for a smart aquaculture system</b></div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-success' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2024</span></span><b>A Probabilistic Fish Growth Model for a Smart Aquaculture System</b></div>
           <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b>, Park, E., Cho, S., Kwon, K. and Ko, Y. M.*</div>
   - title: Presentations
     layout: list
     content:
       - layout: right
+        border: weak
         title: IISE
         sub_title: "IISE Annual Conference & Expo"
         description: |
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-default' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2026</span></span><b>A Theoretically Guaranteed Anomaly Score for Time-Series Anomaly Detection with Foundation Models</b></div>
           <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b> and Ko, Y. M.*</div>
+      - layout: right
+        title: IISE
+        sub_title: "IISE Annual Conference & Expo"
+        description: |
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap"><span class='label label-default' style='display:inline-block;padding:.35em .7em;font-size:1.3rem;font-weight:500;letter-spacing:.02em'>2025</span></span><b>Timeseries Foundation Model for Anomaly Detection in Manufacturing Sensor Data</b></div>
           <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5"><b>Kim, J.</b> and Ko, Y. M.*</div>
+          <div style="margin-left:174px;margin-top:1.2em;font-size:1.3rem;color:#888">* Corresponding author</div>
   - title: Experience
     layout: list
     content:
       - layout: right
         border: weak
         title: POSTECH
-        sub_title: Future IT Innovation Lab
+        sub_title: Future IT Innovation Laboratory
         description: |
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2026.09 – Present</span><b>Postdoctoral Researcher</b></div>
           <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">Time-series foundation models for forecasting and anomaly detection, and their application to manufacturing problems.</div>
@@ -197,14 +213,14 @@ content:
         title: SMARF
         sub_title: Smart farming startup
         description: |
-          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2019.06 – 2019.08</span><b>Internship</b></div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2019.06 – 2019.08</span><b>Intern</b></div>
           <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">Implemented an insect classification model on a small single-board computer and collected insect data in the field.</div>
       - layout: right
         title: NAVER
-        sub_title: Korea's largest internet company
+        sub_title: Korea's largest search engine and web portal
         description: |
-          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2018.07 – 2018.08</span><b>Internship</b></div>
-          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">User feedback</div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:.4em;font-size:1.6rem;line-height:1.5"><span style="flex:0 0 160px;color:#777;font-size:1.5rem;font-variant-numeric:tabular-nums;white-space:nowrap">2018.07 – 2018.08</span><b>Intern</b></div>
+          <div style="margin-left:174px;margin-bottom:.9em;font-size:1.5rem;color:#555;line-height:1.5">Analyzed user feedback data.</div>
   - title: Awards
     layout: list
     content:
@@ -216,13 +232,13 @@ content:
         sub_title: "Awarded KRW 6,000,000"
       - layout: top-right
         title: 2022 ICONI Outstanding Paper Award
-        sub_title: "For the paper \"A probabilistic fish growth model for a smart aquaculture system\""
+        sub_title: "For the paper \"A Probabilistic Fish Growth Model for a Smart Aquaculture System\""
       - layout: top-right
         title: 2021 Korean Data and Information Science Society Spring Conference, Best Poster Award (1st Place)
-        sub_title: "Constrained clustering via black box optimization"
+        sub_title: "Constrained Clustering via Black Box Optimization"
       - layout: top-right
         title: 2020 POSTECH Open Innovation Big Data Challenge, 1st Place
-        sub_title: "Time-series prediction for solar power generation"
+        sub_title: "Time-Series Prediction for Solar Power Generation"
   - title: A Little More About Me
     layout: text
     content: |
